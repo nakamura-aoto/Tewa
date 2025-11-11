@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 会社概要 ページのSEO -->
+    <!-- Primary Meta Tags -->
+    <title>会社概要 | TEWA - 大自然の恵みを学び健美に貢献する | From nature, for wellness and beauty</title>
+    <meta name="title" content="会社概要 | TEWA - 大自然の恵みを学び健美に貢献する | From nature, for wellness and beauty">
+    <meta name="description"
+        content="TEWAは大自然の恵みを活かし、心身の調和と豊かさを追求し、健美な暮らしをサポートするブランドです。自然由来の成分を使用した高品質な製品をお届けします。| TEWA is a brand that utilizes nature's blessings to pursue physical and mental harmony, supporting a healthy and beautiful lifestyle with high-quality products made from natural ingredients.">
+    <meta name="keywords"
+        content="TEWA, 自然, 健美, ウェルネス, ビューティー, 健康, 美容, 自然由来, オーガニック, サステナブル, nature, wellness, beauty, health, organic, sustainable, natural ingredients">
+    <meta name="author" content="TEWA co.ltd">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Japanese, English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tewa.co.jp/">
+    <meta property="og:title" content="会社概要 | TEWA - 大自然の恵みを学び健美に貢献する | From nature, for wellness and beauty">
+    <meta property="og:description"
+        content="TEWAは大自然の恵みを活かし、心身の調和と豊かさを追求し、健美な暮らしをサポートするブランドです。| TEWA is a brand that utilizes nature's blessings to pursue physical and mental harmony, supporting a healthy and beautiful lifestyle.">
+    <meta property="og:image" content="https://tewa.co.jp/assets/images/og-image.jpg">
+    <meta property="og:site_name" content="TEWA">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tewa.co.jp/">
+    <meta property="twitter:title" content="会社概要 | TEWA - 大自然の恵みを学び健美に貢献する | From nature, for wellness and beauty">
+    <meta property="twitter:description"
+        content="TEWAは大自然の恵みを活かし、心身の調和と豊かさを追求し、健美な暮らしをサポートするブランドです。| TEWA is a brand that utilizes nature's blessings to pursue physical and mental harmony.">
+    <meta property="twitter:image" content="https://tewa.co.jp/assets/images/twitter-image.jpg">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1A2C47">
+    <meta name="msapplication-TileColor" content="#1A2C47">
+    <meta name="application-name" content="会社概要 | TEWA">
+    <meta name="apple-mobile-web-app-title" content="会社概要 | TEWA">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tewa.co.jp/about.html">
+
+    <!-- Hreflang for multilingual support -->
+    <link rel="alternate" hreflang="ja" href="https://tewa.co.jp/about.html">
+    <link rel="alternate" hreflang="en" href="https://tewa.co.jp/about.html/en/">
+    <link rel="alternate" hreflang="x-default" href="https://tewa.co.jp/about.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/logo.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/logo.webp">
+    <!-- Animate.css CDN for fade-in animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./assets/index.css">
+    <!-- parallax.js library import (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
+    <!-- Japanese-style smooth animations with fade-up and parallax -->
+    <style>
+        /* Japanese-style smooth fade-up animation with hardware acceleration */
+        .ja-fade-up {
+            opacity: 0;
+            transform: translate3d(0, 40px, 0);
+            transition: opacity 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: opacity, transform;
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+
+        .ja-fade-up.show {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* Enhanced text animation with Japanese-style easing */
+        .animate-text {
+            opacity: 0;
+            transform: translate3d(0, 45px, 0);
+            transition: opacity 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+                transform 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+            will-change: opacity, transform;
+            backface-visibility: hidden;
+        }
+
+        .animate-text.show {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* Enhanced parallax effect for images - optimized for simple-parallax-js */
+        .ja-parallax {
+            will-change: transform;
+            backface-visibility: hidden;
+            /* simple-parallax-js will handle transforms */
+        }
+
+        /* Enhanced image animation with parallax support */
+        .animate-image {
+            opacity: 0;
+            transform: translate3d(0, 50px, 0) scale(0.95);
+            transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1),
+                transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+            will-change: opacity, transform;
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+
+        .animate-image.show {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+
+        /* Title animation - smoother fade-up with Japanese easing */
+        .animate-title {
+            opacity: 0;
+            transform: translate3d(0, 35px, 0);
+            transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1),
+                transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+            will-change: opacity, transform;
+            backface-visibility: hidden;
+        }
+
+        .animate-title.show {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* Table row animation - refined fade-up */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translate3d(-25px, 0, 0);
+            transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: opacity, transform;
+            backface-visibility: hidden;
+        }
+
+        .animate-on-scroll.show {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* Stagger delays for sequential reveal - refined timing */
+        .animate-delay-1,
+        .ja-delay-1 {
+            transition-delay: 0.18s;
+        }
+
+        .animate-delay-2,
+        .ja-delay-2 {
+            transition-delay: 0.35s;
+        }
+
+        .animate-delay-3,
+        .ja-delay-3 {
+            transition-delay: 0.52s;
+        }
+
+        .animate-delay-4,
+        .ja-delay-4 {
+            transition-delay: 0.68s;
+        }
+
+        .ja-delay-5 {
+            transition-delay: 0.85s;
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced image hover with smooth transitions */
+        img.animate-image {
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+    </style>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "会社概要 | TEWA | About Us",
+"alternateName": "テワコーポレイション株式会社 | TEWA Corporation | About Us",
+"url": "https://tewa.co.jp/about.html",
+"logo": "https://tewa.co.jp/assets/images/logo.webp",
+"description": "会社概要 | TEWAは大自然の恵みを活かし、心身の調和と豊かさを追求し、健美な暮らしをサポートするブランドです。| About Us | TEWA is a brand that utilizes nature's blessings to pursue physical and mental harmony, supporting a healthy and beautiful lifestyle.",
+"foundingDate": "2020年10月16日",
+"industry": "会社概要 | Wellness and Beauty",
+"contactPoint": {
+"@type": "ContactPoint",
+"contactType": "お問い合わせ | About Us",
+"availableLanguage": ["日本語 | Japanese | About Us", "英語 | English | About Us"]
+},
+"sameAs": [
+"https://www.instagram.com/tewa_official",
+"https://www.facebook.com/tewa.official",
+"https://line.me/R/ti/p/@tewa_official"
+]
+}
+</script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    'ms': '320px', // mobile small
+                    'mm': '375px', // mobile medium
+                    'ml': '425px', // mobile large
+                    'sm': '640px',
+                    'md': '768px',
+                    'lg': '1024px',
+                    'xl': '1280px',
+                    '2xl': '1440px',
+                    '3xl': '1728px',
+                    '4xl': '1920px',
+                    '5xl': '3840px',
+                    '6xl': '5120px',
+                    '7xl': '6400px',
+                    '8xl': '7680px',
+                    '9xl': '8960px',
+                    '10xl': '10240px',
+                },
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#2563eb',
+                            soft: '#dbeafe'
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family: 'Zen Old Mincho', serif;" class="min-h-dvh bg-white text-gray-800 antialiased">
+    <!-- Header fixed and white -->
+	<header class="fixed top-0 inset-x-0 z-40 bg-white/95 backdrop-blur border-b">
+		<div class="mx-auto max-w-[1440px] ms:pl-[46px] ms:pr-[20px] ms:pt-[10px] ms:pb-[10px] 2xl:pl-0 2xl:pr-0 2xl:pt-0 2xl:pb-0">
+			<div class="flex h-[70px] sm:h-[70px] md:h-[80px] lg:h-[100px] xl:h-[124px] items-center justify-between">
+				<img src="./assets/images/logo.webp" alt="TEWA ロゴ - 大自然の恵みを学び健美に貢献するブランド | TEWA Logo - From nature, for wellness and beauty" class="px-3 sm:px-3 md:px-3 lg:px-3 xl:px-3 w-[81px] h-[18px] sm:w-[81px] sm:h-[18px] xl:w-[154px] xl:h-[34px] object-contain" >
+				<!-- Mobile vertical-dots button -->
+				<button id="mobileDotsButton" class="sm:hidden inline-grid place-items-center w-9 h-9 rounded-full bg-white text-gray-700 shadow ring-1 ring-brand/50 hover:bg-brand-soft" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+					<iconify-icon icon="mdi:more-vert" width="16" height="16"></iconify-icon>
+				</button>
+				<nav class="hidden md:flex items-center sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8" aria-label="Main">
+					<ul id="mainNav" class="flex items-center gap-4 lg:gap-6 flex-nowrap whitespace-nowrap">
+						<li><a href="./about.html" class="text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px]  text-gray-900 hover:text-gray-700">会社概要</a></li>
+						<li><a href="./tewa-story.html" class="text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">TEWA STORY</a></li>
+						<li><a href="./blog.html" class="text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">メディア掲載</a></li>
+						<li><a href="#" class="text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">OEM・卸</a></li>
+						<li><a href="#" class="text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">リンク集</a></li>
+						<li><a href="#" class="text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">お知らせ</a></li>
+						<li><a href="#" class="text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">社会貢献</a></li>
+						<li><a href="#" class="text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">お問い合わせ</a></li>
+						<li id="overflowWrapper" class="relative hidden">
+							<button id="overflowBtn" class="inline-grid place-items-center w-9 h-9 rounded-full bg-white text-gray-700 shadow ring-1 ring-brand/50 hover:bg-brand-soft" aria-haspopup="true" aria-expanded="false" aria-label="More">
+								<iconify-icon icon="mdi:more-vert" width="16" height="16"></iconify-icon>
+							</button>
+							<div id="overflowDropdown" class="absolute right-0 top-full mt-2 min-w-[12rem] rounded-md border bg-white shadow-lg hidden">
+								<ul id="overflowList" class="py-2"></ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				
+			</div>
+		</div>
+		<div id="mobileMenu" class="md:hidden hidden border-t bg-white">
+			<div class="mx-auto max-w-[1440px] px-4 py-3 flex flex-col gap-2">
+				<a href="./about.html" class="py-2 text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">会社概要</a>
+				<a href="./tewa-story.html" class="py-2 text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">TEWA STORY</a>
+				<a href="./blog.html" class="py-2 text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">メディア掲載</a>
+				<a href="#" class="py-2 text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">OEM・卸</a>
+				<a href="#" class="py-2 text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">リンク集</a>
+				<a href="#" class="py-2 text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">お知らせ</a>
+				<a href="#" class="py-2 text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">社会貢献</a>
+				<a href="#" class="py-2 text-[13px]  sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">お問い合わせ</a>
+			</div>
+		</div>
+	</header>
+
+
+    <main role="main">
+        <section id="about" aria-label="会社概要 | About Us">
+            <div class="relative overflow-hidden group animate__animated animate__fadeIn"  tabindex="0" style="perspective: 1500px;">
+                <img src="./assets/images/about.webp" alt="会社概要 メインビジュアル | About Us | Main Visual"
+                    class="w-full h-[640px] sm:h-[560px]  md:h-[756px] object-cover select-none ja-parallax " />
+                <!-- Centered Card Overlay -->
+                <div class="absolute left-1/2 top-[55%] sm:top-[65%] z-20 animate__fadeInDownBig"
+                    animate="animate__fadeInDownBig" style="transform: translate(-50%, -50%);">
+                    <div
+                        class="relative flex flex-col place-items-center place-content-center items-center bg-[#505050]/50 backdrop-blur-[8.8px] rounded-lg shadow-xl  px-8 py-4 w-[184px] h-[97px] md:w-[292px] md:h-[134px]">
+                        <div
+                            class="text-[20px] animate__animated animate__fadeInUp md:text-[30px] font-semibold text-white text-center tracking-[.05em]">
+                            会社概要
+                        </div>
+                        <div
+                            class="mt-2 text-[12px] animate__animated animate__fadeInUp md:text-[16px] text-white text-center tracking-[.05em]">
+                            <span>Company Profile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-content"
+            class="relative pt-[53px] md:pt-[60px] lg:pt-[90px] xl:pt-[118px] pb-16 ms:px-[12px] mm:px-[12px] ml:px-[12px] lg:px-0"
+            aria-label="会社概要内容 | About Us Content">
+            <div class="max-w-[800px]  mx-auto">
+                <h2 class="animate-title text-center text-[20px] md:text-[25px] xl:text-[30px] font-semibold mb-6"
+                    tabindex="0">ご挨拶</h2>
+
+                <div class="border-t  border-gray-400 pt-8 space-y-10">
+                    <div
+                        class="space-y-5  text-gray-900 xl:h-[700px] text-[10px] md:text-[14px] lg:text-[16px]  md:tracking-[.05em] leading-[20px] sm:leading-[35px] animate-text animate-delay-1" tabindex="0">
+                        <p >
+                            人生、年を重ねるごとに自身の健康が気になります。特に昨年来、新型コロナ禍の世界的な流行により、日々のニュースではほとんどの時間をコロナ関係に費やしている現状、いやがうえにも我が身の健康について気付かないわけにはまいりません。
+                        </p>
+                        <p  >
+                            60歳代の半ばに縁あって、キリバス共和国クリスマス島において小規模な塩田事業に携わることになりました。当時、日本では高血圧症の人が多く、その主な原因は食生活の中で塩分の取り過ぎであると結論付けられていました。その後、特に国で製造された化学塩、Nacℓが高血圧の原因とされ、海からの自然塩ならと注目を集めました。 透明度の高いクリスマス島の海水を塩田に引き込み、強烈な太陽光と絶え間なく吹く風だけで水晶のような塩の結晶ができます。ミネラルをたっぷり含んだ純粋な海の塩です。
+                        </p>
+                        <p >
+                            お買い上げ下さるお客様は、みな健康に関心を持ち医療に明るい（詳しい、蘊蓄のある）方の多いことに驚きました。ユザーのお話を伺ううちに私自身も健康に関心を持つようになり、食生活の中で全てクリスマス島の塩を使用することにしました。料理はみなこの塩に切り替えました。高血圧症だった私が、いつの間にか血圧が下がったのです。改めてオーガニックの価値を知りました。
+                        </p>
+                        <p >
+                            そんな折、東京慈恵会医科大学教授　横田邦信先生に出会い、先生の研究テーマであるマグネシウムを知ることになりました。マグネシウムについて知れば知るほど関心が高まりました。私にとっては、クリスマス島の海の塩に対する愛着と近頃知り得たマグネシウムの人体に及ぼす優れた効果を大切に、これからも皆様方の明るい健康長寿のために貢献いたしたいと思います。
+                        </p>
+
+                    </div>
+                    <div class="flex justify-end animate-text animate-delay-2">
+                        <img 
+                            src="./assets/images/ceoshomei.webp" 
+                            alt="テワコーポレイション社名の由来"
+                            class="
+                                object-cover
+                                block
+                                w-[127px] h-[25px]
+                                sm:w-[180px] sm:h-[36px]
+                                md:w-[260px] md:h-[50px]
+                                lg:w-[345px] lg:h-[68px]
+                                xl:w-[345px] xl:h-[68px]
+                                2xl:w-[345px] 2xl:h-[68px]
+                            "
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tewa-coperation-history"
+            class="relative md:mt-5 pb-16 ms:px-[12px] mm:px-[12px] ml:px-[12px]"
+            aria-label="会社概要内容 | About Us Content">
+            <div class="max-w-[800px] mx-auto">
+                <h2 class="animate-text animate-delay-3 font-semibold text-[18px] sm:text-[20px] md:text-[21px] lg:text-[30px] tracking-wide pb-6"
+                    >
+                    テワコーポレイション社名の由来
+                </h2>
+
+                <div class="border-t border-gray-400 pt-8">
+                    <div
+                        class="space-y-10 text-gray-900 xl:h-[700px] text-[10px] md:text-[14px] lg:text-[16px] md:tracking-[.05em] leading-[20px] sm:leading-[35px] animate-text animate-delay-4">
+
+                        <p class=" lg:mb-12" tabindex="0">
+                            ＴＥＷＡ(テワ)とはキリバスの言葉で双胴船を意味します。クリスマス島は噴火によって出来た島なので遠浅の砂浜もなく、港の一部を除けば直、外海です。
+                        </p>
+
+                        <div class="overflow-visible lg:mb-12 relative mt-[36px] md:mt-[50px] lg:mt-[100px] w-full flex items-center justify-center animate-text animate-delay-2"
+                            >
+                           
+                            <img src="./assets/images/tewa-coperation-history.webp" class="relative w-full h-auto object-cover shadow-xl
+                                     " alt="テワコーポレイション社名の由来" >
+                           
+                        </div>
+                        <p class="mt-20">
+                            従って波風も強く、厳しい環境なので横波を受けても耐えられるように小舟でもサイドに丸太をつけ、双胴にして安全を図ります。これにあやかりキリバス共和国と長く縁を持てるよう、また会社が安全運営できるようＴＥＷＡと命名しました。
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="company-summary"
+            class="relative pt-[16px] sm:pt-[24px] md:pt-[32px] lg:pt-[60px] xl:pt-[90px] pb-16 ms:px-[12px] mm:px-[12px] ml:px-[12px] pb-[75px] sm:pb-[100px] md:pb-[125px] lg:pb-[146px]"
+            aria-label="会社概要内容 | About Us Content">
+            <div class="max-w-[800px]  mx-auto">
+                <h2 class="animate-title text-center text-[20px] md:text-[25px] xl:text-[30px] font-semibold mb-6">会社概要
+                </h2>
+                <div class="border-t border-gray-400 pt-8 ">
+                    <table
+                        class="w-full  animate-text animate-delay-5 border-gray-300  border-collapse text-[12px] md:text-[14px]">
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <th
+                                    class="w-[80px] sm:w-[100px] lg:w-[120px] text-left py-[12px] md:py-[13px] px-[14px] md:px-[23px] font-normal">
+                                    社名</th>
+                                <td class="px-[14px] md:px-[23px] py-[12px] md:py-[13px]">テワコーポレイション株式会社</td>
+                            </tr>
+                            <tr >
+                                <th
+                                    class="text-left py-[12px] md:py-[13px] px-[14px] md:px-[23px] font-normal">
+                                    所在地</th>
+                                <td class="px-[14px] md:px-[23px] py-[12px] md:py-[13px]">東京都千代田区永田町2-17-5</td>
+                            </tr>
+                            <tr >
+                                <th
+                                    class="text-left py-[12px] md:py-[13px] px-[14px] md:px-[23px] font-normal">
+                                    TEL</th>
+                                <td class="px-[14px] md:px-[23px] py-[12px] md:py-[13px]">03-6820-1414</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    class="text-left py-[12px] md:py-[13px] px-[14px] md:px-[23px] font-normal align-top">
+                                    FAX</th>
+                                <td class="px-[14px] md:px-[23px] py-[12px] md:py-[13px]"><a href="tel:03-6257-3797"
+                                        class="text-blue-700 underline">03-6257-3797</a></td>
+                            </tr>
+                            <tr>
+                                <th
+                                    class="text-left py-[12px] md:py-[13px] px-[14px] md:px-[23px] font-normal">
+                                    設立</th>
+                                <td class="px-[14px] md:px-[23px] py-[12px] md:py-[13px]">
+                                    1990年10月16日　コスモ商販株式会社設立。<br>
+                                    1998年7月24日よりキリバス共和国産塩事業開始のため、株式会社共栄塩貿易設立（テラリスジャス商標権の継承・塩田、流通の立ち上げのためテワコーポレイション株式会社に社名変更。）
+                                </td>
+                            </tr>
+                            <tr >
+                                <th
+                                    class="text-left py-[12px] md:py-[13px] px-[14px] md:px-[23px] font-normal">
+                                    資本金</th>
+                                <td class="px-[14px] md:px-[23px] py-[12px] md:py-[13px]">￥10,000,000－</td>
+                            </tr>
+                            <tr >
+                                <th
+                                    class="text-left py-[12px] md:py-[13px] px-[14px] md:px-[23px] font-normal align-top">
+                                    営業品目</th>
+                                <td class="px-3 py-2">
+                                    化粧品、健康食品の開発・企画・販売、及び図書出版、販売 「クリスマス島海の塩」国内販売権保持 「海藻を使用した麺類（健康志向）」 「自社開発の化粧品」
+                                    「ミネラル石鹸（テボテボ）」 「スキン・ピーリング」・「スキン・ジェル」
+                                </td>
+                            </tr>
+                            <tr >
+                                <th
+                                    class="text-left py-[12px] md:py-[13px] px-[14px] md:px-[23px] font-normal align-top">
+                                    取引先</th>
+                                <td class="px-[14px] md:px-[23px] py-[12px] md:py-[13px]">
+                                    <ul class="list-disc pl-5 space-y-0.5">
+                                        <li>全国有名百貨店・高級スーパー「こだわりさん」</li>
+                                        <li>自然食品店</li>
+                                        <li>全国有名飲食店</li>
+                                        <li>健康志向料理教室</li>
+                                        <li>百貨店カタログ通販、共同購入機関他</li>
+                                        <li>（一部）全国病院協会、大学病院内売店</li>
+                                        <li>朝日新聞「通販朝日」</li>
+                                        <li>商船三井客船株式会社「にっぽん丸」</li>
+                                        <li>片倉コープアグリ株式会社</li>
+                                        <li>株式会社タニタフィッツミー</li>
+                                        <li>「一村一品マーケット」（成田国際空港店、関西国際空港店）</li>
+                                        <li>株式会社ビバ</li>
+                                        <li>株式会社ヘルスガイド</li>
+                                        <li>波動法製造株式会社</li>
+                                        <li>ジャパンソルト株式会社</li>
+                                        <li>株式会社ソルト関西</li>
+                                        <li>株式会社フォーユー</li>
+                                        <li>鬼太郎寿し（湯島店、上野店）</li>
+                                        <li>その他和洋食、菓子製品 等</li>
+                                        <li>桐生南ポニー</li>
+                                    </ul>
+                                    <p class="text-xs text-gray-500 mt-5">（順不同）</p>
+                                </td>
+                            </tr>
+                                <tr  style="border-bottom: 1px solid rgb(229 231 235 / var(--tw-divide-opacity, 1));">
+                                <th
+                                    class="text-left py-[12px] md:py-[13px] px-[14px]  md:px-[23px] font-normal">
+                                    取引銀行</th>
+                                <td class="px-[14px] md:px-[23px] py-[12px] md:py-[13px]">
+                                    みずほ銀行（渋谷中央支店） 三菱ＵＦＪ銀行（神保町支店・丸の内支店・神田駅前支店） 三井住友銀行（銀座支店）
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+    <footer class="bg-[#1A2C47] text-white">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Desktop Layout: Horizontal -->
+            <div class="hidden lg:flex items-center justify-between">
+                <!-- Logo with underline -->
+                <div class="relative">
+                    <h2 class="text-4xl font-bold">TEWA</h2>
+                    <div class="flex items-center justify-center gap-4 mt-4 ml-1">
+                        <!-- Instagram -->
+                        <a href="#"
+                            class="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+                            <iconify-icon icon="mdi:instagram" class="w-4 h-4"></iconify-icon>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="#"
+                            class="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+                            <iconify-icon icon="mdi:facebook" class="w-4 h-4"></iconify-icon>
+                        </a>
+                        <!-- LINE -->
+                        <a href="#"
+                            class="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+                            <iconify-icon icon="simple-icons:line" class="w-4 h-4"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- Navigation Links -->
+                <nav class="flex items-center gap-8">
+                    <a href="./about.html" class="text-[14px] hover:text-gray-300 transition-colors text">会社概要</a>
+                    <a href="./tewa-story.html" class="text-[14px] hover:text-gray-300 transition-colors text">TEWA
+                        STORY</a>
+                    <a href="./blog.html" class="text-[14px] hover:text-gray-300 transition-colors text">メディア掲載</a>
+                    <a href="#" class="text-[14px] hover:text-gray-300 transition-colors text">OEM・卸</a>
+                    <a href="#" class="text-[14px] hover:text-gray-300 transition-colors text">リンク集</a>
+                    <a href="#" class="text-[14px] hover:text-gray-300 transition-colors text">お知らせ</a>
+                    <a href="#" class="text-[14px] hover:text-gray-300 transition-colors text">社会貢献</a>
+                    <a href="#" class="text-[14px] hover:text-gray-300 transition-colors text">お問い合わせ</a>
+                </nav>
+                <!-- Social Media Icons -->
+
+            </div>
+
+            <!-- Mobile Layout: Vertical Stack -->
+            <div class="lg:hidden">
+                <!-- Top Section: Logo and Social Media -->
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold mb-4">TEWA</h2>
+                    <div class="flex items-center justify-center gap-3">
+                        <!-- Instagram -->
+                        <a href="#"
+                            class="w-4 h-4 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+                            <iconify-icon icon="mdi:instagram" class="w-4 h-4"></iconify-icon>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="#"
+                            class="w-4 h-4 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+                            <iconify-icon icon="mdi:facebook" class="w-4 h-4"></iconify-icon>
+                        </a>
+                        <!-- LINE -->
+                        <a href="#"
+                            class="w-4 h-4 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+                            <iconify-icon icon="simple-icons:line" class="w-4 h-4"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Divider Line -->
+
+                <!-- Middle Section: Navigation Links in 4 columns -->
+                <div class="grid grid-cols-4 gap-x-2 gap-y-3 mb-6 max-w-lg mx-auto">
+                    <a href="./about.html"
+                        class="text-[10px] hover:text-gray-300 transition-colors text-center">会社概要</a>
+                    <a href="./tewa-story.html"
+                        class="text-[10px] hover:text-gray-300 transition-colors text-center">TEWA STORY</a>
+                    <a href="./blog.html" class="text-[10px] hover:text-gray-300 transition-colors text-center">メディア掲載</a>
+                    <a href="#" class="text-[10px] hover:text-gray-300 transition-colors text-center">OEM・卸</a>
+                    <a href="#" class="text-[10px] hover:text-gray-300 transition-colors text-center">リンク集</a>
+                    <a href="#" class="text-[10px] hover:text-gray-300 transition-colors text-center">お知らせ</a>
+                    <a href="#" class="text-[10px] hover:text-gray-300 transition-colors text-center">社会貢献</a>
+                    <a href="#" class="text-[10px] hover:text-gray-300 transition-colors text-center">お問い合わせ</a>
+                </div>
+
+                <!-- Divider Line -->
+                <div class="border-t border-gray-400 mb-6"></div>
+            </div>
+
+            <!-- Divider Line (Desktop) -->
+            <div class="hidden lg:block border-t border-gray-400 my-8"></div>
+
+            <!-- Bottom Section: Copyright -->
+            <div class="text-center">
+                <p class="text-xs text-[10px] sm:text-[12px] md:text-[14px] text-gray-300">Copyright © <span
+                        id="year"></span> TEWA co.ltd All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/main.js"></script>
+    <script>
+        // Enhanced Japanese-style animations with parallax
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add parallax class to images for depth effect
+            // Only apply to hero images and images with animate-image class
+            const images = document.querySelectorAll('img.animate-image, section#about img, img[class*="ja-parallax"]');
+            images.forEach(img => {
+                // Add parallax class to hero image and animated images
+                if (!img.classList.contains('ja-parallax') && !img.closest('footer')) {
+                    img.classList.add('ja-parallax');
+                }
+            });
+
+            // Enhanced text observer with refined Japanese-style triggers
+            const textObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio > 0.15) {
+                        if (!entry.target.hasAttribute('data-content-animated')) {
+                            // Use requestAnimationFrame for smooth animation trigger
+                            requestAnimationFrame(() => {
+                                entry.target.classList.add('show');
+                                entry.target.setAttribute('data-content-animated', 'true');
+                            });
+                        }
+                    }
+                });
+            }, {
+                threshold: [0.15, 0.3, 0.5],
+                rootMargin: '0px 0px -80px 0px'
+            });
+
+            // Enhanced image observer with refined triggers
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio > 0.15) {
+                        if (!entry.target.hasAttribute('data-content-animated')) {
+                            // Slight delay for more elegant reveal
+                            requestAnimationFrame(() => {
+                                setTimeout(() => {
+                                    entry.target.classList.add('show');
+                                    entry.target.setAttribute('data-content-animated', 'true');
+                                }, 50);
+                            });
+                        }
+                    }
+                });
+            }, {
+                threshold: [0.15, 0.3, 0.5],
+                rootMargin: '0px 0px -80px 0px'
+            });
+
+            // Enhanced table row observer with refined triggers
+            const tableRowObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+                        if (!entry.target.hasAttribute('data-content-animated')) {
+                            requestAnimationFrame(() => {
+                                entry.target.classList.add('show');
+                                entry.target.setAttribute('data-content-animated', 'true');
+                            });
+                        }
+                    }
+                });
+            }, {
+                threshold: [0.1, 0.25, 0.4],
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            // Observe all animated elements
+            setTimeout(() => {
+                const allAnimatedText = document.querySelectorAll('.animate-text');
+                allAnimatedText.forEach(el => {
+                    textObserver.observe(el);
+                });
+
+                const allAnimatedImages = document.querySelectorAll('.animate-image');
+                allAnimatedImages.forEach(el => {
+                    imageObserver.observe(el);
+                });
+
+                const allAnimatedTitles = document.querySelectorAll('.animate-title');
+                allAnimatedTitles.forEach(el => {
+                    textObserver.observe(el);
+                });
+
+                const allTableRows = document.querySelectorAll('.animate-on-scroll');
+                allTableRows.forEach(el => {
+                    tableRowObserver.observe(el);
+                });
+
+                // Animate titles on load if visible
+                allAnimatedTitles.forEach(title => {
+                    if (title.getBoundingClientRect().top < window.innerHeight) {
+                        setTimeout(() => {
+                            title.classList.add('show');
+                        }, 300);
+                    }
+                });
+            }, 100);
+
+            // Initialize simple-parallax-js library with Japanese-style settings
+            setTimeout(() => {
+                const parallaxImages = document.querySelectorAll('.ja-parallax, img.animate-image.ja-parallax');
+                if (parallaxImages.length && typeof simpleParallax !== 'undefined') {
+                    // Initialize parallax for all images with refined Japanese-style settings
+                    new simpleParallax(parallaxImages, {
+                        scale: 1.12, // Subtle scale effect for depth
+                        delay: 0.6, // Smooth delay for elegant transition
+                        transition: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)', // Japanese easing curve
+                        orientation: 'up', // Parallax moves up on scroll
+                        overflow: true, // Allow overflow for better effect
+                        maxTransition: 50, // Limit transition for smoother performance
+                        customWrapper: '', // Use default wrapper
+                        customContainer: '' // Use default container
+                    });
+                }
+            }, 300); // Delay to ensure DOM and animations are ready
+        });
+    </script>
+</body>
