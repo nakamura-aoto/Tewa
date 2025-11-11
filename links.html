@@ -592,8 +592,8 @@
         >
           <!-- Section Template Start -->
           <div
-            class="flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
             id="section-gov"
+            class="fade-section opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
           >
             <h4
               class="font-bold text-center text-2xl sm:text-3xl md:text-[30px] leading-snug"
@@ -622,40 +622,12 @@
                     >厚生労働省</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
-                  <img
-                    src="./assets/images/link_icon.webp"
-                    alt="リンクアイコン"
-                    width="20"
-                    height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
-                  />
-                  <a
-                    href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
-                    >農林水産省（塩に関する情報）</a
-                  >
-                </li>
-                <li class="flex items-start gap-2">
-                  <img
-                    src="./assets/images/link_icon.webp"
-                    alt="リンクアイコン"
-                    width="20"
-                    height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
-                  />
-                  <a
-                    href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
-                    >食品安全委員会</a
-                  >
-                </li>
               </ul>
             </div>
           </div>
           <div
-            class="flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
             id="section-industry-research"
+            class="fade-section opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
           >
             <h4
               class="font-bold text-center text-2xl sm:text-3xl md:text-[30px] leading-snug"
@@ -702,8 +674,8 @@
             </div>
           </div>
           <div
-            class="flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
             id="section-industry"
+            class="fade-section opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
           >
             <h4
               class="font-bold text-center text-2xl sm:text-3xl md:text-[30px] leading-snug"
@@ -778,8 +750,8 @@
             </div>
           </div>
           <div
-            class="flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
             id="section-health"
+            class="fade-section opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
           >
             <h4
               class="font-bold text-center text-2xl sm:text-3xl md:text-[30px] leading-snug"
@@ -840,8 +812,8 @@
             </div>
           </div>
           <div
-            class="flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
             id="section-environment"
+            class="fade-section opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
           >
             <h4
               class="font-bold text-center text-2xl sm:text-3xl md:text-[30px] leading-snug"
@@ -902,8 +874,8 @@
             </div>
           </div>
           <div
-            class="flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
             id="section-company"
+            class="fade-section opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
           >
             <h4
               class="font-bold text-center text-2xl sm:text-3xl md:text-[30px] leading-snug"
@@ -978,8 +950,8 @@
             </div>
           </div>
           <div
-            class="flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
             id="section-tewa"
+            class="fade-section opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center gap-6 sm:gap-8 py-6 sm:py-8 max-w-3xl sm:max-w-4xl md:max-w-5xl w-full"
           >
             <h4
               class="font-bold text-center text-2xl sm:text-3xl md:text-[30px] leading-snug"
@@ -1277,169 +1249,49 @@
 
     <script src="./assets/main.js"></script>
     <script>
-      // Enhanced Japanese-style animations with parallax
-      document.addEventListener("DOMContentLoaded", () => {
-        // Add parallax class to images for depth effect
-        // Only apply to hero images and images with animate-image class
-        const images = document.querySelectorAll(
-          'img.animate-image, section#about img, img[class*="ja-parallax"]'
-        );
-        images.forEach((img) => {
-          // Add parallax class to hero image and animated images
-          if (
-            !img.classList.contains("ja-parallax") &&
-            !img.closest("footer")
-          ) {
-            img.classList.add("ja-parallax");
+      // Filter button scroll functionality
+      const filterButtons = document.querySelectorAll(".filter-button");
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const sectionId = this.getAttribute("data-section");
+          if (sectionId) {
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+              // Get header height for offset
+              const header = document.querySelector("header");
+              const headerHeight = header ? header.offsetHeight : 0;
+
+              // Calculate scroll position with offset
+              const elementPosition = targetSection.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - headerHeight - 20;
+
+              // Smooth scroll to section
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
           }
         });
+      });
 
-        // Enhanced text observer with refined Japanese-style triggers
-        const textObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && entry.intersectionRatio > 0.15) {
-                if (!entry.target.hasAttribute("data-content-animated")) {
-                  // Use requestAnimationFrame for smooth animation trigger
-                  requestAnimationFrame(() => {
-                    entry.target.classList.add("show");
-                    entry.target.setAttribute("data-content-animated", "true");
-                  });
-                }
-              }
-            });
-          },
-          {
-            threshold: [0.15, 0.3, 0.5],
-            rootMargin: "0px 0px -80px 0px",
-          }
-        );
-
-        // Enhanced image observer with refined triggers
-        const imageObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && entry.intersectionRatio > 0.15) {
-                if (!entry.target.hasAttribute("data-content-animated")) {
-                  // Slight delay for more elegant reveal
-                  requestAnimationFrame(() => {
-                    setTimeout(() => {
-                      entry.target.classList.add("show");
-                      entry.target.setAttribute(
-                        "data-content-animated",
-                        "true"
-                      );
-                    }, 50);
-                  });
-                }
-              }
-            });
-          },
-          {
-            threshold: [0.15, 0.3, 0.5],
-            rootMargin: "0px 0px -80px 0px",
-          }
-        );
-
-        // Enhanced table row observer with refined triggers
-        const tableRowObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-                if (!entry.target.hasAttribute("data-content-animated")) {
-                  requestAnimationFrame(() => {
-                    entry.target.classList.add("show");
-                    entry.target.setAttribute("data-content-animated", "true");
-                  });
-                }
-              }
-            });
-          },
-          {
-            threshold: [0.1, 0.25, 0.4],
-            rootMargin: "0px 0px -40px 0px",
-          }
-        );
-
-        // Observe all animated elements
-        setTimeout(() => {
-          const allAnimatedText = document.querySelectorAll(".animate-text");
-          allAnimatedText.forEach((el) => {
-            textObserver.observe(el);
-          });
-
-          const allAnimatedImages = document.querySelectorAll(".animate-image");
-          allAnimatedImages.forEach((el) => {
-            imageObserver.observe(el);
-          });
-
-          const allAnimatedTitles = document.querySelectorAll(".animate-title");
-          allAnimatedTitles.forEach((el) => {
-            textObserver.observe(el);
-          });
-
-          const allTableRows = document.querySelectorAll(".animate-on-scroll");
-          allTableRows.forEach((el) => {
-            tableRowObserver.observe(el);
-          });
-
-          // Animate titles on load if visible
-          allAnimatedTitles.forEach((title) => {
-            if (title.getBoundingClientRect().top < window.innerHeight) {
-              setTimeout(() => {
-                title.classList.add("show");
-              }, 300);
+      // Animate elements when they enter viewport
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove("opacity-0", "translate-y-8");
+              entry.target.classList.add("opacity-100", "translate-y-0");
+              observer.unobserve(entry.target);
             }
           });
-        }, 100);
+        },
+        { threshold: 0.15 }
+      );
 
-        // Initialize simple-parallax-js library with Japanese-style settings
-        setTimeout(() => {
-          const parallaxImages = document.querySelectorAll(
-            ".ja-parallax, img.animate-image.ja-parallax"
-          );
-          if (parallaxImages.length && typeof simpleParallax !== "undefined") {
-            // Initialize parallax for all images with refined Japanese-style settings
-            new simpleParallax(parallaxImages, {
-              scale: 1.12, // Subtle scale effect for depth
-              delay: 0.6, // Smooth delay for elegant transition
-              transition: "cubic-bezier(0.25, 0.46, 0.45, 0.94)", // Japanese easing curve
-              orientation: "up", // Parallax moves up on scroll
-              overflow: true, // Allow overflow for better effect
-              maxTransition: 50, // Limit transition for smoother performance
-              customWrapper: "", // Use default wrapper
-              customContainer: "", // Use default container
-            });
-          }
-        }, 300); // Delay to ensure DOM and animations are ready
-
-        // Filter button scroll functionality
-        const filterButtons = document.querySelectorAll(".filter-button");
-        filterButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            const sectionId = this.getAttribute("data-section");
-            if (sectionId) {
-              const targetSection = document.getElementById(sectionId);
-              if (targetSection) {
-                // Get header height for offset
-                const header = document.querySelector("header");
-                const headerHeight = header ? header.offsetHeight : 0;
-
-                // Calculate scroll position with offset
-                const elementPosition =
-                  targetSection.getBoundingClientRect().top;
-                const offsetPosition =
-                  elementPosition + window.pageYOffset - headerHeight - 20;
-
-                // Smooth scroll to section
-                window.scrollTo({
-                  top: offsetPosition,
-                  behavior: "smooth",
-                });
-              }
-            }
-          });
-        });
+      document.querySelectorAll(".fade-section").forEach((el) => {
+        observer.observe(el);
       });
     </script>
   </body>
