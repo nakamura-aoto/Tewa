@@ -68,30 +68,6 @@
   <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
   <!-- Japanese-style smooth animations with fade-up and parallax -->
   <style>
-    .trapezium {
-      width: 100%;
-      height: 300px;
-      background: white;
-      /* main color white */
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      outline: 1px solid #46ade2;
-      /* border color - outline is NOT clipped by clip-path */
-      outline-offset: -4px;
-      /* Make outline appear as border */
-    }
-
-    .left {
-      clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
-    }
-
-    .right {
-      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
-    }
-
     /* FAQ Accordion Styles */
     .faq-item {
       border: 1px solid #1c96d5;
@@ -219,13 +195,21 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 0;
+      padding: 120px 12% 60px 12%;
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
       text-align: center;
       pointer-events: auto;
       overflow: hidden;
       word-wrap: break-word;
       overflow-wrap: break-word;
+    }
+
+    @media (max-width: 767px) {
+
+      .triangle-container,
+      .triangle {
+        display: none;
+      }
     }
 
     .triangle-content {
@@ -243,8 +227,9 @@
     }
 
     .triangle h2 {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       color: #003366;
+      margin-top: 60px;
       margin-bottom: 10px;
       word-wrap: break-word;
       overflow-wrap: break-word;
@@ -255,7 +240,7 @@
 
     @media (min-width: 1280px) {
       .triangle h2 {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
 
@@ -267,11 +252,11 @@
     }
 
     .triangle p {
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       color: #333;
       line-height: 1.8;
       max-width: 100%;
-      width: 100%;
+      width: 50%;
       word-wrap: break-word;
       overflow-wrap: break-word;
       hyphens: auto;
@@ -281,38 +266,80 @@
 
     @media (min-width: 1280px) {
       .triangle p {
-        font-size: 20px;
+        font-size: 16px;
       }
     }
 
-    swiper-container {
+    svg {
       width: 100%;
+      /* total width */
+      height: 100%;
+      overflow: visible;
+    }
+
+    path {
+      fill: none;
+      stroke: #0078ff;
+      stroke-width: 1;
+      stroke-linejoin: miter;
+      vector-effect: non-scaling-stroke;
+      shape-rendering: geometricPrecision;
+    }
+
+    foreignObject {
+      width: 45%;
       height: 100%;
     }
 
-    swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #444;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    /* Hide SVG paths on mobile screens */
+    @media (max-width: 767px) {
+      svg path {
+        display: none;
+      }
+    }
+  </style>
+  <style>
+    .faq-answer {
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
     }
 
-    swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #444;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .faq-question[aria-expanded="true"]+.faq-answer {
+      opacity: 1;
     }
 
-    swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .faq-icon .minus-icon {
+      display: none;
+    }
+
+    .faq-question[aria-expanded="true"] .faq-icon .minus-icon {
+      display: inline-block;
+    }
+
+    .faq-question[aria-expanded="true"] .faq-icon .plus-icon {
+      display: none;
+    }
+
+    .faq-question .faq-icon .plus-icon,
+    .faq-question .faq-icon .minus-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .faq-item {
+      background: #f7fafc;
+      border-radius: 8px;
+      padding: 16px 20px;
+      box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.05);
     }
   </style>
   <!-- Structured Data (JSON-LD) -->
@@ -514,31 +541,41 @@
       </div>
 
       <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-4 sm:py-8 md:py-12 text-center">
-        <div class="flex flex-col md:flex-row justify-center relative">
-          <div class="trapezium left">
-            <div class="flex flex-col gap-2">
-              <h4
-                class="text-[15px] xs:text-[18px] sm:text-[20px] md:text-[30px] font-bold tracking-[.05em] text-black">
+        <svg viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
+          <!-- LEFT BOX (Right slanted edge, top wider) -->
+          <path d="M0 0 L405 0 L345 220 L0 220 Z" />
+          <foreignObject x="0" y="0" width="360" height="220">
+            <div class="flex flex-col items-center justify-center w-full h-full p-2 gap-2">
+              <h4 class="text-[14px] xs:text-[18px] md:text-[22px] font-bold text-black animate-on-scroll opacity-0"
+                data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.08s;">
                 TEWAコーポレーションの特徴
               </h4>
               <span
-                class="block w-[20px] xs:w-[24px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto my-3 md:my-8 animate-on-scroll opacity-0"
-                data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.35s"></span>
-              <div class="flex items-center gap-6 xs:gap-8 sm:gap-10">
+                class="block w-[20px] xs:w-[24px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto my-2 md:my-4 animate-on-scroll opacity-0"
+                data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.18s"></span>
+              <div class="flex items-center gap-4 sm:gap-6">
                 <img src="./assets/images/sub-left.webp" alt="TEWAコーポレーションの特徴"
-                  class="w-[140px] h-[60px] xs:w-[160px] xs:h-[72px] sm:w-[200px] sm:h-[90px]" />
+                  class="w-[140px] h-[40px] sm:w-[200px] sm:h-[50px] animate-on-scroll opacity-0"
+                  data-animate="animate__fadeInLeft" style="--animate-duration: .9s; --animate-delay: 0.3s;" />
                 <img src="./assets/images/sub-right.webp" alt="TEWAコーポレーションの特徴"
-                  class="w-[140px] h-[60px] xs:w-[160px] xs:h-[72px] sm:w-[200px] sm:h-[90px]" />
+                  class="w-[140px] h-[40px] sm:w-[200px] sm:h-[50px] animate-on-scroll opacity-0"
+                  data-animate="animate__fadeInRight" style="--animate-duration: .9s; --animate-delay: 0.5s;" />
               </div>
             </div>
-          </div>
-          <div class="trapezium right">
-            <p class="text-[15px] sm:text-[20px] font-light leading-[30px] tracking-[.05em] text-gray-700">
-              テワコーポレイションは、オーストラリア・デボラ湖（Lake
-              Deborah）やクリスマス島など、自然環境に恵まれた地域から採取される高純度ミネラル原料を日本市場へ届けています。マグネシウムや海塩などの天然素材の輸入・研究・商品化・ブランディングまで一貫体制で展開し、健康食品・化粧品・食品分野における「自然由来」「安心・安全」「高機能性」を重視した製品開発を支援しています。素材のバックグラウンドや環境への配慮を大切にし、**“自然を科学する”**という理念のもと、持続可能なものづくりを推進しています。
-            </p>
-          </div>
-        </div>
+          </foreignObject>
+
+          <!-- RIGHT BOX (Left slanted edge, top narrower) -->
+          <path d="M415 0 L800 0 L800 220 L355 220 Z" />
+          <foreignObject x="415" y="0" width="400" height="220">
+            <div class="flex justify-center items-center w-full h-full p-1">
+              <p class="text-[12px] sm:text-[14px] font-light leading-[20px] text-center text-gray-700 animate-on-scroll opacity-0"
+                data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.15s;">
+                テワコーポレイションは、オーストラリア・デボラ湖（Lake
+                Deborah）やクリスマス島など、自然環境に恵まれた地域から採取される高純度ミネラル原料を日本市場へ届けています。マグネシウムや海塩などの天然素材の輸入・研究・商品化・ブランディングまで一貫体制で展開し、健康食品・化粧品・食品分野における「自然由来」「安心・安全」「高機能性」を重視した製品開発を支援しています。素材のバックグラウンドや環境への配慮を大切にし、<strong>“自然を科学する”</strong>という理念のもと、持続可能なものづくりを推進しています。
+              </p>
+            </div>
+          </foreignObject>
+        </svg>
       </div>
     </section>
 
@@ -554,45 +591,53 @@
             class="block w-[20px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto mt-3 md:mt-6 animate-on-scroll opacity-0"
             data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.35s"></span>
         </div>
-        <div class="max-w-[1000px] flex flex-col md:flex-row my-4 md:my-8 gap-4 xl:gap-8 w-full overflow-hidden">
+        <div
+          class="max-w-[1000px] flex flex-col md:flex-row my-4 md:my-8 gap-4 xl:gap-8 w-full overflow-hidden animate-on-scroll opacity-0"
+          data-animate="animate__fadeInUp" style="--animate-duration: 1.1s;">
           <div class="w-full md:w-[75%] relative swiper-container featured-swiper overflow-hidden">
             <div class="swiper-wrapper h-full">
-              <div class="relative swiper-slide h-full">
+              <div class="relative swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__zoomIn"
+                style="--animate-duration: 1s; --animate-delay: 0.1s;">
                 <div class="absolute inset-0 bg-[#01326a66]"></div>
                 <img src="assets/images/goods/6.webp" alt="Feature 1" class="w-full h-full object-cover">
               </div>
-              <div class="relative swiper-slide h-full">
+              <div class="relative swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__zoomIn"
+                style="--animate-duration: 1s; --animate-delay: 0.3s;">
                 <div class="absolute inset-0 bg-[#01326a66]"></div>
                 <img src="assets/images/goods/2.webp" alt="Feature 2" class="w-full h-full object-cover">
               </div>
-              <div class="relative swiper-slide h-full">
+              <div class="relative swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__zoomIn"
+                style="--animate-duration: 1s; --animate-delay: 0.5s;">
                 <div class="absolute inset-0 bg-[#01326a66]"></div>
                 <img src="assets/images/goods/5.webp" alt="Feature 3" class="w-full h-full object-cover">
               </div>
-              <div class="relative swiper-slide h-full">
+              <div class="relative swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__zoomIn"
+                style="--animate-duration: 1s; --animate-delay: 0.7s;">
                 <div class="absolute inset-0 bg-[#01326a66]"></div>
                 <img src="assets/images/goods/4.webp" alt="Feature 4" class="w-full h-full object-cover">
               </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
-          <div thumbsSlider="" class="w-full md:w-[25%] h-[100px] md:h-full max-h-[750px] swiper-container featured-thumbs-swiper">
+          <div thumbsSlider=""
+            class="w-full md:w-[25%] h-[100px] md:h-full max-h-[750px] swiper-container featured-thumbs-swiper animate-on-scroll opacity-0"
+            data-animate="animate__fadeInRight" style="--animate-duration: 1s; --animate-delay: 0.5s;">
             <div class="swiper-wrapper h-full">
               <div class="swiper-slide h-full" data-index="0" tabindex="0">
                 <img src="assets/images/goods/6.webp" alt="Feature 1"
-                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img transition-transform duration-300 hover:scale-105">
               </div>
               <div class="swiper-slide h-full" data-index="1" tabindex="0">
                 <img src="assets/images/goods/2.webp" alt="Feature 2"
-                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img transition-transform duration-300 hover:scale-105">
               </div>
               <div class="swiper-slide h-full" data-index="2" tabindex="0">
                 <img src="assets/images/goods/5.webp" alt="Feature 3"
-                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img transition-transform duration-300 hover:scale-105">
               </div>
               <div class="swiper-slide h-full" data-index="3" tabindex="0">
                 <img src="assets/images/goods/4.webp" alt="Feature 4"
-                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img transition-transform duration-300 hover:scale-105">
               </div>
             </div>
           </div>
@@ -646,43 +691,54 @@
             data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.35s"></span>
         </div>
 
-        <div class="max-w-[1000px] flex flex-col md:flex-row my-4 md:my-8 gap-4 xl:gap-8 w-full overflow-hidden">
+        <div
+          class="max-w-[1000px] flex flex-col md:flex-row my-4 md:my-8 gap-4 xl:gap-8 w-full overflow-hidden animate-on-scroll opacity-0"
+          data-animate="animate__fadeInUp" style="--animate-duration:1.1s;">
           <div class="w-full md:w-[75%] relative swiper-container featured-swiper-1 overflow-hidden">
             <div class="swiper-wrapper h-full">
-              <div class="relative swiper-slide h-full">
+              <div class="relative swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__zoomIn"
+                style="--animate-duration:0.8s;">
                 <div class="absolute inset-0 bg-[#01326a66]"></div>
                 <img src="assets/images/20.webp" alt="Feature 1" class="w-full h-full object-cover">
               </div>
-              <div class="relative swiper-slide h-full">
+              <div class="relative swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__zoomIn"
+                style="--animate-duration:0.8s; --animate-delay:0.15s;">
                 <div class="absolute inset-0 bg-[#01326a66]"></div>
                 <img src="assets/images/21.webp" alt="Feature 2" class="w-full h-full object-cover">
               </div>
-              <div class="relative swiper-slide h-full">
+              <div class="relative swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__zoomIn"
+                style="--animate-duration:0.8s; --animate-delay:0.3s;">
                 <div class="absolute inset-0 bg-[#01326a66]"></div>
                 <img src="assets/images/22.webp" alt="Feature 3" class="w-full h-full object-cover">
               </div>
-              <div class="relative swiper-slide h-full">
+              <div class="relative swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__zoomIn"
+                style="--animate-duration:0.8s; --animate-delay:0.45s;">
                 <div class="absolute inset-0 bg-[#01326a66]"></div>
                 <img src="assets/images/23.webp" alt="Feature 4" class="w-full h-full object-cover">
               </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
-          <div thumbsSlider="" class="w-full md:w-[25%] h-[100px] md:h-full max-h-[750px] swiper-container featured-thumbs-swiper-1">
+          <div thumbsSlider=""
+            class="w-full md:w-[25%] h-[100px] md:h-full max-h-[750px] swiper-container featured-thumbs-swiper-1">
             <div class="swiper-wrapper h-full">
-              <div class="swiper-slide h-full" data-index="0" tabindex="0">
+              <div class="swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__fadeInRight"
+                style="--animate-duration:0.7s;" data-index="0" tabindex="0">
                 <img src="assets/images/20.webp" alt="Feature 1"
                   class="w-full h-full object-cover cursor-pointer featured-thumb-img">
               </div>
-              <div class="swiper-slide h-full" data-index="1" tabindex="0">
+              <div class="swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__fadeInRight"
+                style="--animate-duration:0.7s; --animate-delay:0.12s;" data-index="1" tabindex="0">
                 <img src="assets/images/21.webp" alt="Feature 2"
                   class="w-full h-full object-cover cursor-pointer featured-thumb-img">
               </div>
-              <div class="swiper-slide h-full" data-index="2" tabindex="0">
+              <div class="swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__fadeInRight"
+                style="--animate-duration:0.7s; --animate-delay:0.24s;" data-index="2" tabindex="0">
                 <img src="assets/images/22.webp" alt="Feature 3"
                   class="w-full h-full object-cover cursor-pointer featured-thumb-img">
               </div>
-              <div class="swiper-slide h-full" data-index="3" tabindex="0">
+              <div class="swiper-slide h-full animate-on-scroll opacity-0" data-animate="animate__fadeInRight"
+                style="--animate-duration:0.7s; --animate-delay:0.36s;" data-index="3" tabindex="0">
                 <img src="assets/images/23.webp" alt="Feature 4"
                   class="w-full h-full object-cover cursor-pointer featured-thumb-img">
               </div>
@@ -786,55 +842,63 @@
     </section>
 
     <!-- Guaranteed peace of mind and legal compliance -->
-    <section
-    class="border-t"
-    aria-label="安心保証・法令対応 | Guaranteed peace of mind and legal compliance"
-  >
-    <div
-      class="flex justify-center items-center w-full"
-      style="
+    <section class="border-t" aria-label="安心保証・法令対応 | Guaranteed peace of mind and legal compliance">
+      <div class="flex justify-center items-center w-full py-8 md:py-0" style="
         background: url('./assets/images/safety.webp') center center / cover
           no-repeat;
-      "
-    >
-      <div class="relative w-[820px] h-[860px] xl:text-[20px] mx-auto">
-        <!-- Top Circle -->
-        <div
-          class="absolute z-20 w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] xl:text-[20px] text-gray-800"
-          style="top: 50px; left: 50%; transform: translate(-50%, 0)"
-        >
-          安全性検査・<br />品質検査の実施と<br />報告書の提示
-        </div>
+      ">
+        <!-- Desktop Layout -->
+        <div class="hidden md:block relative w-[820px] h-[860px] xl:text-[20px] mx-auto">
+          <!-- Top Circle -->
+          <div
+            class="absolute z-20 w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] xl:text-[20px] text-gray-800"
+            style="top: 50px; left: 50%; transform: translate(-50%, 0)">
+            安全性検査・<br />品質検査の実施と<br />報告書の提示
+          </div>
 
-        <!-- Triangle with text inside -->
-        <div class="triangle-container">
-          <div class="triangle">
-            <h2>安心保証・法令対応</h2>
-            <hr />
-            <p>
-              OEM・卸取引においては、製品の安全性と法令遵守対応を重要な基盤です。
-              当社では、原料から最終製品まで、国内外の基準に沿った品質管理と
-              法令対応を徹底し、安心してお取引いただける体制を整えています。
-            </p>
+          <!-- Triangle with text inside -->
+          <div class="triangle-container">
+            <div class="triangle">
+              <h2>安心保証・法令対応</h2>
+              <hr />
+              <p>
+                OEM・卸取引においては、製品の安全性と法令遵守対応を重要な基盤です。
+                当社では、原料から最終製品まで、国内外の基準に沿った品質管理と
+                法令対応を徹底し、安心してお取引いただける体制を整えています。
+              </p>
+            </div>
+          </div>
+
+          <!-- Bottom Circles, spaced farther left and right -->
+          <div
+            class="absolute z-20 w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] xl:text-[20px] text-gray-800"
+            style="left: 90px; top: 720px; transform: translate(-50%, -50%)">
+            成分表示・<br />法令対応サポート
+          </div>
+          <div
+            class="absolute z-20 w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] xl:text-[20px] text-gray-800"
+            style="left: 730px; top: 720px; transform: translate(-50%, -50%)">
+            安心して進められる<br />OEM・卸取引
           </div>
         </div>
 
-        <!-- Bottom Circles, spaced farther left and right -->
-        <div
-          class="absolute z-20 w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] xl:text-[20px] text-gray-800"
-          style="left: 90px; top: 720px; transform: translate(-50%, -50%)"
-        >
-          成分表示・<br />法令対応サポート
-        </div>
-        <div
-          class="absolute z-20 w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] xl:text-[20px] text-gray-800"
-          style="left: 730px; top: 720px; transform: translate(-50%, -50%)"
-        >
-          安心して進められる<br />OEM・卸取引
+        <!-- Mobile Layout: Circles in Column -->
+        <div class="md:hidden flex flex-col items-center gap-6 w-full px-4">
+          <div
+            class="w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] text-gray-800">
+            安全性検査・<br />品質検査の実施と<br />報告書の提示
+          </div>
+          <div
+            class="w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] text-gray-800">
+            成分表示・<br />法令対応サポート
+          </div>
+          <div
+            class="w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] text-gray-800">
+            安心して進められる<br />OEM・卸取引
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
     <!-- FAQ（よくある質問） -->
     <section class="border-t" aria-label="FAQ（よくある質問） | FAQ">
@@ -847,10 +911,11 @@
           <span
             class="block w-[20px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto mt-3 md:mt-6 animate-on-scroll opacity-0"
             data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.35s"></span>
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-4" id="faq-list">
             <!-- FAQ Item 1 -->
-            <div class="faq-item">
-              <div class="faq-question">
+            <div class="faq-item animate-on-scroll opacity-0" data-animate="animate__fadeInUp"
+              style="--animate-duration:0.85s">
+              <div class="faq-question cursor-pointer" tabindex="0" aria-expanded="false">
                 <span class="faq-question-text">MOQ（最小ロット）はどのくらいですか？</span>
                 <div class="faq-icon">
                   <svg class="plus-icon" viewBox="0 0 24 24">
@@ -862,16 +927,16 @@
                   </svg>
                 </div>
               </div>
-              <div class="faq-answer">
+              <div class="faq-answer transition-all duration-500 max-h-0 overflow-hidden">
                 <div class="faq-answer-text">
                   回答をここに入力してください。
                 </div>
               </div>
             </div>
-
             <!-- FAQ Item 2 -->
-            <div class="faq-item">
-              <div class="faq-question">
+            <div class="faq-item animate-on-scroll opacity-0" data-animate="animate__fadeInUp"
+              style="--animate-duration:0.85s; --animate-delay:0.10s">
+              <div class="faq-question cursor-pointer" tabindex="0" aria-expanded="false">
                 <span class="faq-question-text">納期の目安を教えてください。</span>
                 <div class="faq-icon">
                   <svg class="plus-icon" viewBox="0 0 24 24">
@@ -883,16 +948,16 @@
                   </svg>
                 </div>
               </div>
-              <div class="faq-answer">
+              <div class="faq-answer transition-all duration-500 max-h-0 overflow-hidden">
                 <div class="faq-answer-text">
                   回答をここに入力してください。
                 </div>
               </div>
             </div>
-
             <!-- FAQ Item 3 -->
-            <div class="faq-item">
-              <div class="faq-question">
+            <div class="faq-item animate-on-scroll opacity-0" data-animate="animate__fadeInUp"
+              style="--animate-duration:0.85s; --animate-delay:0.20s">
+              <div class="faq-question cursor-pointer" tabindex="0" aria-expanded="false">
                 <span class="faq-question-text">試作はできますか？ 費用はかかりますか？</span>
                 <div class="faq-icon">
                   <svg class="plus-icon" viewBox="0 0 24 24">
@@ -904,16 +969,16 @@
                   </svg>
                 </div>
               </div>
-              <div class="faq-answer">
+              <div class="faq-answer transition-all duration-500 max-h-0 overflow-hidden">
                 <div class="faq-answer-text">
                   回答をここに入力してください。
                 </div>
               </div>
             </div>
-
             <!-- FAQ Item 4 -->
-            <div class="faq-item">
-              <div class="faq-question">
+            <div class="faq-item animate-on-scroll opacity-0" data-animate="animate__fadeInUp"
+              style="--animate-duration:0.85s; --animate-delay:0.30s">
+              <div class="faq-question cursor-pointer" tabindex="0" aria-expanded="false">
                 <span class="faq-question-text">配合変更や香りのカスタマイズはできますか？</span>
                 <div class="faq-icon">
                   <svg class="plus-icon" viewBox="0 0 24 24">
@@ -925,16 +990,16 @@
                   </svg>
                 </div>
               </div>
-              <div class="faq-answer">
+              <div class="faq-answer transition-all duration-500 max-h-0 overflow-hidden">
                 <div class="faq-answer-text">
                   回答をここに入力してください。
                 </div>
               </div>
             </div>
-
             <!-- FAQ Item 5 -->
-            <div class="faq-item">
-              <div class="faq-question">
+            <div class="faq-item animate-on-scroll opacity-0" data-animate="animate__fadeInUp"
+              style="--animate-duration:0.85s; --animate-delay:0.40s">
+              <div class="faq-question cursor-pointer" tabindex="0" aria-expanded="false">
                 <span class="faq-question-text">費用構成はどのようになりますか？</span>
                 <div class="faq-icon">
                   <svg class="plus-icon" viewBox="0 0 24 24">
@@ -946,16 +1011,16 @@
                   </svg>
                 </div>
               </div>
-              <div class="faq-answer">
+              <div class="faq-answer transition-all duration-500 max-h-0 overflow-hidden">
                 <div class="faq-answer-text">
                   回答をここに入力してください。
                 </div>
               </div>
             </div>
-
             <!-- FAQ Item 6 -->
-            <div class="faq-item">
-              <div class="faq-question">
+            <div class="faq-item animate-on-scroll opacity-0" data-animate="animate__fadeInUp"
+              style="--animate-duration:0.85s; --animate-delay:0.50s">
+              <div class="faq-question cursor-pointer" tabindex="0" aria-expanded="false">
                 <span class="faq-question-text">製品の安定供給体制はありますか？</span>
                 <div class="faq-icon">
                   <svg class="plus-icon" viewBox="0 0 24 24">
@@ -967,16 +1032,16 @@
                   </svg>
                 </div>
               </div>
-              <div class="faq-answer">
+              <div class="faq-answer transition-all duration-500 max-h-0 overflow-hidden">
                 <div class="faq-answer-text">
                   回答をここに入力してください。
                 </div>
               </div>
             </div>
-
             <!-- FAQ Item 7 -->
-            <div class="faq-item">
-              <div class="faq-question">
+            <div class="faq-item animate-on-scroll opacity-0" data-animate="animate__fadeInUp"
+              style="--animate-duration:0.85s; --animate-delay:0.60s">
+              <div class="faq-question cursor-pointer" tabindex="0" aria-expanded="false">
                 <span class="faq-question-text">検査証明書（COA）やエビデンスは取得できますか？</span>
                 <div class="faq-icon">
                   <svg class="plus-icon" viewBox="0 0 24 24">
@@ -988,16 +1053,16 @@
                   </svg>
                 </div>
               </div>
-              <div class="faq-answer">
+              <div class="faq-answer transition-all duration-500 max-h-0 overflow-hidden">
                 <div class="faq-answer-text">
                   回答をここに入力してください。
                 </div>
               </div>
             </div>
-
             <!-- FAQ Item 8 -->
-            <div class="faq-item">
-              <div class="faq-question">
+            <div class="faq-item animate-on-scroll opacity-0" data-animate="animate__fadeInUp"
+              style="--animate-duration:0.85s; --animate-delay:0.70s">
+              <div class="faq-question cursor-pointer" tabindex="0" aria-expanded="false">
                 <span class="faq-question-text">ラベルデザインやパッケージ制作も依頼できますか？</span>
                 <div class="faq-icon">
                   <svg class="plus-icon" viewBox="0 0 24 24">
@@ -1009,16 +1074,16 @@
                   </svg>
                 </div>
               </div>
-              <div class="faq-answer">
+              <div class="faq-answer transition-all duration-500 max-h-0 overflow-hidden">
                 <div class="faq-answer-text">
                   回答をここに入力してください。
                 </div>
               </div>
             </div>
-
             <!-- FAQ Item 9 -->
-            <div class="faq-item">
-              <div class="faq-question">
+            <div class="faq-item animate-on-scroll opacity-0" data-animate="animate__fadeInUp"
+              style="--animate-duration:0.85s; --animate-delay:0.80s">
+              <div class="faq-question cursor-pointer" tabindex="0" aria-expanded="false">
                 <span class="faq-question-text">小ロット導入後、需要が増えた際に増産はできますか？</span>
                 <div class="faq-icon">
                   <svg class="plus-icon" viewBox="0 0 24 24">
@@ -1030,16 +1095,16 @@
                   </svg>
                 </div>
               </div>
-              <div class="faq-answer">
+              <div class="faq-answer transition-all duration-500 max-h-0 overflow-hidden">
                 <div class="faq-answer-text">
                   回答をここに入力してください。
                 </div>
               </div>
             </div>
-
             <!-- FAQ Item 10 -->
-            <div class="faq-item">
-              <div class="faq-question">
+            <div class="faq-item animate-on-scroll opacity-0" data-animate="animate__fadeInUp"
+              style="--animate-duration:0.85s; --animate-delay:0.90s">
+              <div class="faq-question cursor-pointer" tabindex="0" aria-expanded="false">
                 <span class="faq-question-text">支払い条件はどのようになりますか？</span>
                 <div class="faq-icon">
                   <svg class="plus-icon" viewBox="0 0 24 24">
@@ -1051,7 +1116,7 @@
                   </svg>
                 </div>
               </div>
-              <div class="faq-answer">
+              <div class="faq-answer transition-all duration-500 max-h-0 overflow-hidden">
                 <div class="faq-answer-text">
                   回答をここに入力してください。
                 </div>
@@ -1259,24 +1324,6 @@
       observer.observe(el);
     });
 
-    // FAQ Accordion functionality
-    document.querySelectorAll(".faq-question").forEach((question) => {
-      question.addEventListener("click", function () {
-        const faqItem = this.closest(".faq-item");
-        const isActive = faqItem.classList.contains("active");
-
-        // Close all FAQ items
-        document.querySelectorAll(".faq-item").forEach((item) => {
-          item.classList.remove("active");
-        });
-
-        // If the clicked item wasn't active, open it
-        if (!isActive) {
-          faqItem.classList.add("active");
-        }
-      });
-    });
-
     var featuredThumbsSwiper = new Swiper(".featured-thumbs-swiper", {
       direction: window.innerWidth < 768 ? 'horizontal' : 'vertical',
       spaceBetween: 10,
@@ -1355,6 +1402,53 @@
       },
     });
 
+  </script>
+  <script>
+    // FAQ accordion animation logic
+    document.addEventListener("DOMContentLoaded", function () {
+      const faqItems = document.querySelectorAll(".faq-item");
+      faqItems.forEach(function (item) {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        if (!question || !answer) return;
+        question.addEventListener('click', toggleFaq);
+        question.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleFaq.call(this, e);
+          }
+        });
+        function toggleFaq(e) {
+          const expanded = question.getAttribute('aria-expanded') === "true";
+          // collapse all
+          faqItems.forEach(it => {
+            it.querySelector('.faq-question').setAttribute('aria-expanded', "false");
+            it.querySelector('.faq-answer').style.maxHeight = "0";
+            it.querySelector('.faq-answer').style.opacity = "0";
+          });
+          if (!expanded) {
+            question.setAttribute('aria-expanded', "true");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            answer.style.opacity = "1";
+          }
+        }
+
+        // For animation-on-scroll (basic example)
+        if (item.classList.contains('animate-on-scroll')) {
+          const onScroll = () => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+              item.classList.remove("opacity-0");
+              item.classList.add("animate__animated", item.dataset.animate);
+              window.removeEventListener('scroll', onScroll);
+            }
+          };
+          window.addEventListener("scroll", onScroll);
+          // Immediately check in case already in view
+          onScroll();
+        }
+      });
+    });
   </script>
 
 </body>
