@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- 会社概要 ページのSEO -->
+  <!-- Primary Meta Tags -->
+  <title>
+    会社概要 | TEWA - 大自然の恵みを学び健美に貢献する | From nature, for
+    wellness and beauty
+  </title>
+  <!-- Swiper's CSS and JS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <meta name="title" content="会社概要 | TEWA - 大自然の恵みを学び健美に貢献する | From nature, for wellness and beauty" />
+  <meta name="description"
+    content="TEWAは大自然の恵みを活かし、心身の調和と豊かさを追求し、健美な暮らしをサポートするブランドです。自然由来の成分を使用した高品質な製品をお届けします。| TEWA is a brand that utilizes nature's blessings to pursue physical and mental harmony, supporting a healthy and beautiful lifestyle with high-quality products made from natural ingredients." />
+  <meta name="keywords"
+    content="TEWA, 自然, 健美, ウェルネス, ビューティー, 健康, 美容, 自然由来, オーガニック, サステナブル, nature, wellness, beauty, health, organic, sustainable, natural ingredients" />
+  <meta name="author" content="TEWA co.ltd" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="Japanese, English" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tewa.co.jp/" />
+  <meta property="og:title" content="会社概要 | TEWA - 大自然の恵みを学び健美に貢献する | From nature, for wellness and beauty" />
+  <meta property="og:description"
+    content="TEWAは大自然の恵みを活かし、心身の調和と豊かさを追求し、健美な暮らしをサポートするブランドです。| TEWA is a brand that utilizes nature's blessings to pursue physical and mental harmony, supporting a healthy and beautiful lifestyle." />
+  <meta property="og:image" content="https://tewa.co.jp/assets/images/og-image.jpg" />
+  <meta property="og:site_name" content="TEWA" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://tewa.co.jp/" />
+  <meta property="twitter:title" content="会社概要 | TEWA - 大自然の恵みを学び健美に貢献する | From nature, for wellness and beauty" />
+  <meta property="twitter:description"
+    content="TEWAは大自然の恵みを活かし、心身の調和と豊かさを追求し、健美な暮らしをサポートするブランドです。| TEWA is a brand that utilizes nature's blessings to pursue physical and mental harmony." />
+  <meta property="twitter:image" content="https://tewa.co.jp/assets/images/twitter-image.jpg" />
+
+  <!-- Additional SEO Meta Tags -->
+  <meta name="theme-color" content="#1A2C47" />
+  <meta name="msapplication-TileColor" content="#1A2C47" />
+  <meta name="application-name" content="会社概要 | TEWA" />
+  <meta name="apple-mobile-web-app-title" content="会社概要 | TEWA" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://tewa.co.jp/about.html" />
+
+  <!-- Hreflang for multilingual support -->
+  <link rel="alternate" hreflang="ja" href="https://tewa.co.jp/about.html" />
+  <link rel="alternate" hreflang="en" href="https://tewa.co.jp/about.html/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://tewa.co.jp/about.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.webp" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/logo.webp" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/logo.webp" />
+  <!-- Animate.css CDN for fade-in animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./assets/index.css" />
+  <!-- parallax.js library import (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
+  <!-- Japanese-style smooth animations with fade-up and parallax -->
+  <style>
+    .trapezium {
+      width: 100%;
+      height: 300px;
+      background: white;
+      /* main color white */
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      outline: 1px solid #46ade2;
+      /* border color - outline is NOT clipped by clip-path */
+      outline-offset: -4px;
+      /* Make outline appear as border */
+    }
+
+    .left {
+      clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
+    .right {
+      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    /* FAQ Accordion Styles */
+    .faq-item {
+      border: 1px solid #1c96d5;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      cursor: pointer;
+      background: white;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background-color: #f8f9fa;
+    }
+
+    .faq-question-text {
+      flex: 1;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    @media (min-width: 1280px) {
+      .faq-question-text {
+        font-size: 24px;
+      }
+    }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
+      position: relative;
+    }
+
+    .faq-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: #1c96d5;
+      stroke-width: 2;
+      fill: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .faq-icon .plus-icon {
+      position: absolute;
+      opacity: 1;
+    }
+
+    .faq-icon .minus-icon {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .faq-item.active .faq-icon .plus-icon {
+      opacity: 0;
+    }
+
+    .faq-item.active .faq-icon .minus-icon {
+      opacity: 1;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 20px;
+      background: white;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 1000px;
+      padding: 16px 20px;
+    }
+
+    .faq-answer-text {
+      text-align: left;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 1280px) {
+      .faq-answer-text {
+        font-size: 20px;
+      }
+    }
+
+    /* Triangle with clip-path and flexbox centering */
+    .triangle-container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 140px;
+      height: 580px;
+      width: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .triangle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(50% 0%, 11% 100%, 89% 100%);
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+      text-align: center;
+      pointer-events: auto;
+      overflow: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .triangle-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      box-sizing: border-box;
+      clip-path: polygon(50% 5%, 13% 95%, 87% 95%);
+      padding: 80px 12% 60px 12%;
+    }
+
+    .triangle h2 {
+      font-size: 1.4rem;
+      color: #003366;
+      margin-bottom: 10px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 1280px) {
+      .triangle h2 {
+        font-size: 20px;
+      }
+    }
+
+    .triangle hr {
+      width: 50px;
+      border: none;
+      border-top: 2px solid #003366;
+      margin-bottom: 15px;
+    }
+
+    .triangle p {
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.8;
+      max-width: 100%;
+      width: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 1280px) {
+      .triangle p {
+        font-size: 20px;
+      }
+    }
+
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "会社概要 | TEWA | About Us",
+        "alternateName": "テワコーポレイション株式会社 | TEWA Corporation | About Us",
+        "url": "https://tewa.co.jp/about.html",
+        "logo": "https://tewa.co.jp/assets/images/logo.webp",
+        "description": "会社概要 | TEWAは大自然の恵みを活かし、心身の調和と豊かさを追求し、健美な暮らしをサポートするブランドです。| About Us | TEWA is a brand that utilizes nature's blessings to pursue physical and mental harmony, supporting a healthy and beautiful lifestyle.",
+        "foundingDate": "2020年10月16日",
+        "industry": "会社概要 | Wellness and Beauty",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "お問い合わせ | About Us",
+          "availableLanguage": [
+            "日本語 | Japanese | About Us",
+            "英語 | English | About Us"
+          ]
+        },
+        "sameAs": [
+          "https://www.instagram.com/tewa_official",
+          "https://www.facebook.com/tewa.official",
+          "https://line.me/R/ti/p/@tewa_official"
+        ]
+      }
+    </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          ms: "320px", // mobile small
+          mm: "375px", // mobile medium
+          ml: "425px", // mobile large
+          sm: "640px",
+          md: "768px",
+          lg: "1024px",
+          xl: "1280px",
+          "2xl": "1440px",
+          "3xl": "1728px",
+          "4xl": "1920px",
+          "5xl": "3840px",
+          "6xl": "5120px",
+          "7xl": "6400px",
+          "8xl": "7680px",
+          "9xl": "8960px",
+          "10xl": "10240px",
+        },
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: "#2563eb",
+              soft: "#dbeafe",
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <link href="https://fonts.goods/gleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body style="font-family: 'Zen Old Mincho', serif" class="min-h-dvh bg-white text-gray-800 antialiased">
+  <!-- Header fixed and white -->
+  <header class="fixed top-0 inset-x-0 z-40 bg-white/95 backdrop-blur border-b">
+    <div
+      class="mx-auto max-w-[1440px] ms:pl-[46px] ms:pr-[20px] ms:pt-[10px] ms:pb-[10px] 2xl:pl-0 2xl:pr-0 2xl:pt-0 2xl:pb-0">
+      <div class="flex h-[70px] sm:h-[70px] md:h-[80px] lg:h-[100px] xl:h-[124px] items-center justify-between">
+        <img src="./assets/images/logo.webp"
+          alt="TEWA ロゴ - 大自然の恵みを学び健美に貢献するブランド | TEWA Logo - From nature, for wellness and beauty"
+          class="px-3 sm:px-3 md:px-3 lg:px-3 xl:px-3 w-[81px] h-[18px] sm:w-[81px] sm:h-[18px] xl:w-[154px] xl:h-[34px] object-contain" />
+        <!-- Mobile vertical-dots button -->
+        <button id="mobileDotsButton"
+          class="sm:hidden inline-grid place-items-center w-9 h-9 rounded-full bg-white text-gray-700 shadow ring-1 ring-brand/50 hover:bg-brand-soft"
+          aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+          <iconify-icon icon="mdi:more-vert" width="16" height="16"></iconify-icon>
+        </button>
+        <nav class="hidden md:flex items-center sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8" aria-label="Main">
+          <ul id="mainNav" class="flex items-center gap-4 lg:gap-6 flex-nowrap whitespace-nowrap">
+            <li>
+              <a href="./about.html"
+                class="text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">会社概要</a>
+            </li>
+            <li>
+              <a href="./tewa-story.html"
+                class="text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">TEWA
+                STORY</a>
+            </li>
+            <li>
+              <a href="./blog.html"
+                class="text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">メディア掲載</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">OEM・卸</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">リンク集</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">お知らせ</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">社会貢献</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-900 hover:text-gray-700">お問い合わせ</a>
+            </li>
+            <li id="overflowWrapper" class="relative hidden">
+              <button id="overflowBtn"
+                class="inline-grid place-items-center w-9 h-9 rounded-full bg-white text-gray-700 shadow ring-1 ring-brand/50 hover:bg-brand-soft"
+                aria-haspopup="true" aria-expanded="false" aria-label="More">
+                <iconify-icon icon="mdi:more-vert" width="16" height="16"></iconify-icon>
+              </button>
+              <div id="overflowDropdown"
+                class="absolute right-0 top-full mt-2 min-w-[12rem] rounded-md border bg-white shadow-lg hidden">
+                <ul id="overflowList" class="py-2"></ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t bg-white">
+      <div class="mx-auto max-w-[1440px] px-4 py-3 flex flex-col gap-2">
+        <a href="./about.html"
+          class="py-2 text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">会社概要</a>
+        <a href="./tewa-story.html"
+          class="py-2 text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">TEWA
+          STORY</a>
+        <a href="./blog.html"
+          class="py-2 text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">メディア掲載</a>
+        <a href="#"
+          class="py-2 text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">OEM・卸</a>
+        <a href="#"
+          class="py-2 text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">リンク集</a>
+        <a href="#"
+          class="py-2 text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">お知らせ</a>
+        <a href="#"
+          class="py-2 text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">社会貢献</a>
+        <a href="#"
+          class="py-2 text-[13px] sm:text-sm md:text-[12px] lg:text-[14px] xl:text-[16px] text-gray-700 hover:text-gray-900">お問い合わせ</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <section aria-label="OEM向け情報 | OEM Information">
+      <div class="relative overflow-hidden group animate__animated animate__fadeIn" tabindex="0"
+        style="perspective: 1500px">
+        <img src="./assets/images/info.webp" alt="OEM向け情報 メインビジュアル | OEM Information"
+          class="w-full h-[640px] sm:h-[560px] md:h-[756px] object-cover select-none ja-parallax" />
+        <!-- Centered Card Overlay -->
+        <div class="absolute left-1/2 top-[55%] sm:top-[65%] z-20 animate__fadeInDownBig"
+          animate="animate__fadeInDownBig" style="transform: translate(-50%, -50%)">
+          <div
+            class="relative flex flex-col place-items-center place-content-center items-center bg-[#505050]/50 backdrop-blur-[8.8px] rounded-lg shadow-xl px-8 py-4 w-[200px] h-[97px] md:w-[320px] md:h-[134px]">
+            <div
+              class="text-[20px] animate__animated animate__fadeInUp md:text-[30px] font-semibold text-white text-center tracking-[.05em]">
+              OEM・卸
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t" aria-label="OEM向け情報 | OEM Information">
+      <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-4 sm:py-8 md:py-12 text-center">
+        <p class="my-2 text-[12px] sm:text-[16px] md:text-[20px] text-gray-700 tracking-[.05em] animate-on-scroll opacity-0"
+          data-animate="animate__fadeInUp" tabindex="0" style="--animate-duration: 1s; animation-delay: 0.28s">
+          マグネシウム製品・オーガニック塩のOEM・卸販売をご検討中の企業・店舗様へ
+        </p>
+        <h2
+          class="text-[15px] sm:text-[20px] md:text-[30px] font-bold tracking-[.05em] text-black animate-on-scroll opacity-0"
+          data-animate="animate__fadeInUp" tabindex="0" style="--animate-duration: 1s">
+          自然の力を、製品開発の原点に。
+        </h2>
+        <span
+          class="block w-[20px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto mt-3 md:mt-8 animate-on-scroll opacity-0"
+          data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.35s"></span>
+
+        <p class="mt-2 md:mt-8 mx-auto max-w-[1440px] text-[11px] leading-[26px] xs:text-[12px] xs:leading-[28px] sm:text-[14px] sm:leading-[30px] md:text-[16px] md:leading-[34px] xl:text-[20px] xl:leading-[40px] tracking-[.1em] text-black animate-on-scroll opacity-0"
+          data-animate="animate__fadeInUp" tabindex="0" style="--animate-duration: 1s">
+          テワコーポレイションは、オーストラリア・デボラ湖由来のマグネシウムと、南太平洋・クリスマス島の天然塩という
+          自然の恵みを活かした原料をもとに、健康食品・化粧品などのOEM開発・卸販売を行っています。
+          素材の確かな品質と長年の製品開発ノウハウを組み合わせることで、「自然×科学」のバランスを大切にしたオリジナル製品の開発をサポートいたします。天然素材の可能性を引き出し、御社のブランド価値を高める製品づくりを、ぜひ私たちと一緒に。
+        </p>
+      </div>
+
+      <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-4 sm:py-8 md:py-12 text-center">
+        <div class="flex flex-col md:flex-row justify-center relative">
+          <div class="trapezium left">
+            <div class="flex flex-col gap-2">
+              <h4
+                class="text-[15px] xs:text-[18px] sm:text-[20px] md:text-[30px] font-bold tracking-[.05em] text-black">
+                TEWAコーポレーションの特徴
+              </h4>
+              <span
+                class="block w-[20px] xs:w-[24px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto my-3 md:my-8 animate-on-scroll opacity-0"
+                data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.35s"></span>
+              <div class="flex items-center gap-6 xs:gap-8 sm:gap-10">
+                <img src="./assets/images/sub-left.webp" alt="TEWAコーポレーションの特徴"
+                  class="w-[140px] h-[60px] xs:w-[160px] xs:h-[72px] sm:w-[200px] sm:h-[90px]" />
+                <img src="./assets/images/sub-right.webp" alt="TEWAコーポレーションの特徴"
+                  class="w-[140px] h-[60px] xs:w-[160px] xs:h-[72px] sm:w-[200px] sm:h-[90px]" />
+              </div>
+            </div>
+          </div>
+          <div class="trapezium right">
+            <p class="text-[15px] sm:text-[20px] font-light leading-[30px] tracking-[.05em] text-gray-700">
+              テワコーポレイションは、オーストラリア・デボラ湖（Lake
+              Deborah）やクリスマス島など、自然環境に恵まれた地域から採取される高純度ミネラル原料を日本市場へ届けています。マグネシウムや海塩などの天然素材の輸入・研究・商品化・ブランディングまで一貫体制で展開し、健康食品・化粧品・食品分野における「自然由来」「安心・安全」「高機能性」を重視した製品開発を支援しています。素材のバックグラウンドや環境への配慮を大切にし、**“自然を科学する”**という理念のもと、持続可能なものづくりを推進しています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wholesale and OEM information for magnesium products -->
+    <section class="border-t" aria-label="マグネシウム製品の卸販売・OEM案内 | Wholesale and OEM information for magnesium products">
+      <div class="mx-auto max-w-[1000px] px-4 sm:px-6 lg:px-8 py-4 sm:py-8 md:py-12 text-center">
+        <div class="flex flex-col">
+          <p class="text-[15px] sm:text-[20px] md:text-[30px] font-bold tracking-[.05em] text-black animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" tabindex="0" style="--animate-duration: 1s">
+            マグネシウム製品の卸販売・OEM案内
+          </p>
+          <span
+            class="block w-[20px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto mt-3 md:mt-6 animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.35s"></span>
+        </div>
+        <div class="max-w-[1000px] flex flex-col md:flex-row my-4 md:my-8 gap-4 xl:gap-8 w-full overflow-hidden">
+          <div class="w-full md:w-[75%] relative swiper-container featured-swiper overflow-hidden">
+            <div class="swiper-wrapper h-full">
+              <div class="relative swiper-slide h-full">
+                <div class="absolute inset-0 bg-[#01326a66]"></div>
+                <img src="assets/images/goods/6.webp" alt="Feature 1" class="w-full h-full object-cover">
+              </div>
+              <div class="relative swiper-slide h-full">
+                <div class="absolute inset-0 bg-[#01326a66]"></div>
+                <img src="assets/images/goods/2.webp" alt="Feature 2" class="w-full h-full object-cover">
+              </div>
+              <div class="relative swiper-slide h-full">
+                <div class="absolute inset-0 bg-[#01326a66]"></div>
+                <img src="assets/images/goods/5.webp" alt="Feature 3" class="w-full h-full object-cover">
+              </div>
+              <div class="relative swiper-slide h-full">
+                <div class="absolute inset-0 bg-[#01326a66]"></div>
+                <img src="assets/images/goods/4.webp" alt="Feature 4" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div thumbsSlider="" class="w-full md:w-[25%] h-[100px] md:h-full max-h-[750px] swiper-container featured-thumbs-swiper">
+            <div class="swiper-wrapper h-full">
+              <div class="swiper-slide h-full" data-index="0" tabindex="0">
+                <img src="assets/images/goods/6.webp" alt="Feature 1"
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+              </div>
+              <div class="swiper-slide h-full" data-index="1" tabindex="0">
+                <img src="assets/images/goods/2.webp" alt="Feature 2"
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+              </div>
+              <div class="swiper-slide h-full" data-index="2" tabindex="0">
+                <img src="assets/images/goods/5.webp" alt="Feature 3"
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+              </div>
+              <div class="swiper-slide h-full" data-index="3" tabindex="0">
+                <img src="assets/images/goods/4.webp" alt="Feature 4"
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-3 grid-rows-2 gap-0.5 font-sans text-[10px] md:text-[14px] w-full items-center justify-center text-center sm:grid-cols-3 sm:grid-rows-2 md:grid-cols-6 md:grid-rows-1">
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s">
+            お問い合わせ
+          </div>
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s; --animate-delay: 0.1s">
+            ヒアリング／ご提案
+          </div>
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s; --animate-delay: 0.2s">
+            試作・お見積り
+          </div>
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s; --animate-delay: 0.3s">
+            ご契約
+          </div>
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s; --animate-delay: 0.4s">
+            製造・納品
+          </div>
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s; --animate-delay: 0.5s">
+            継続供給<br />サポート
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Christmas Island Salt Wholesale -->
+    <section class="border-t" aria-label="クリスマス島の塩の卸販売 | Christmas Island Salt Wholesale">
+      <div class="mx-auto max-w-[1000px] px-4 sm:px-6 lg:px-8 py-4 sm:py-8 md:py-12 text-center">
+        <div class="flex flex-col">
+          <p class="text-[15px] sm:text-[20px] md:text-[30px] font-bold tracking-[.05em] text-black animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" tabindex="0" style="--animate-duration: 1s">
+            クリスマス島の塩の卸販売
+          </p>
+          <span
+            class="block w-[20px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto mt-3 md:mt-6 animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.35s"></span>
+        </div>
+
+        <div class="max-w-[1000px] flex flex-col md:flex-row my-4 md:my-8 gap-4 xl:gap-8 w-full overflow-hidden">
+          <div class="w-full md:w-[75%] relative swiper-container featured-swiper-1 overflow-hidden">
+            <div class="swiper-wrapper h-full">
+              <div class="relative swiper-slide h-full">
+                <div class="absolute inset-0 bg-[#01326a66]"></div>
+                <img src="assets/images/20.webp" alt="Feature 1" class="w-full h-full object-cover">
+              </div>
+              <div class="relative swiper-slide h-full">
+                <div class="absolute inset-0 bg-[#01326a66]"></div>
+                <img src="assets/images/21.webp" alt="Feature 2" class="w-full h-full object-cover">
+              </div>
+              <div class="relative swiper-slide h-full">
+                <div class="absolute inset-0 bg-[#01326a66]"></div>
+                <img src="assets/images/22.webp" alt="Feature 3" class="w-full h-full object-cover">
+              </div>
+              <div class="relative swiper-slide h-full">
+                <div class="absolute inset-0 bg-[#01326a66]"></div>
+                <img src="assets/images/23.webp" alt="Feature 4" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div thumbsSlider="" class="w-full md:w-[25%] h-[100px] md:h-full max-h-[750px] swiper-container featured-thumbs-swiper-1">
+            <div class="swiper-wrapper h-full">
+              <div class="swiper-slide h-full" data-index="0" tabindex="0">
+                <img src="assets/images/20.webp" alt="Feature 1"
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+              </div>
+              <div class="swiper-slide h-full" data-index="1" tabindex="0">
+                <img src="assets/images/21.webp" alt="Feature 2"
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+              </div>
+              <div class="swiper-slide h-full" data-index="2" tabindex="0">
+                <img src="assets/images/22.webp" alt="Feature 3"
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+              </div>
+              <div class="swiper-slide h-full" data-index="3" tabindex="0">
+                <img src="assets/images/23.webp" alt="Feature 4"
+                  class="w-full h-full object-cover cursor-pointer featured-thumb-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-3 grid-rows-2 gap-0.5 font-sans text-[10px] md:text-[14px] w-full items-center justify-center text-center sm:grid-cols-3 sm:grid-rows-2 md:grid-cols-6 md:grid-rows-1">
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s">
+            お問い合わせ
+          </div>
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s; --animate-delay: 0.1s">
+            ヒアリング／ご提案
+          </div>
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s; --animate-delay: 0.2s">
+            試作・お見積り
+          </div>
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s; --animate-delay: 0.3s">
+            ご契約
+          </div>
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s; --animate-delay: 0.4s">
+            製造・納品
+          </div>
+          <div
+            class="flex items-center justify-center h-10 md:h-16 bg-sky-200 text-black [clip-path:polygon(0%_0%,90%_0%,100%_50%,90%_100%,0%_100%,10%_50%)] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInLeft" style="--animate-duration: 0.8s; --animate-delay: 0.5s">
+            継続供給<br />サポート
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sales promotion support and follow-up system -->
+    <section class="border-t" style="background-color: #9fd5e4"
+      aria-label="Sales promotion support and follow-up system | Sales promotion support and follow-up system">
+      <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-4 sm:py-8 md:py-12 text-center">
+        <div class="flex flex-col justify-center items-center gap-4 md:gap-8">
+          <h2
+            class="text-[15px] sm:text-[20px] md:text-[30px] font-bold tracking-[.05em] text-black animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" style="--animate-duration: 0.9s">
+            販促支援・フォローアップ体制
+          </h2>
+          <p class="text-[15px] sm:text-[20px] font-light leading-[30px] tracking-[.05em] text-gray-700 animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" style="--animate-duration: 0.9s; --animate-delay: 0.2s">
+            当社は、製品をお届けするだけでなく、導入後の販売促進と顧客満足度向上を一貫してサポートします。B2Bパートナーのビジネスをともに成長させるために、以下のような支援体制を整えています。
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 md:gap-8 lg:gap-14 w-full mt-6">
+            <!-- Item 1 -->
+            <div class="bg-white rounded-md shadow p-6 flex flex-col items-center text-left animate-on-scroll opacity-0"
+              data-animate="animate__fadeInUp" style="--animate-duration: 0.9s; --animate-delay: 0.3s">
+              <div class="text-[12px] md:text-[20px] font-bold mb-2 sm:mb-4 md:mb-8 text-black text-center">
+                販促物の制作支援
+              </div>
+              <div class="text-[12px] md:text-[16px] text-gray-700">
+                店舗やECサイトでの販売を円滑に進めるため、即戦力となる販促ツールを制作支援します。
+                製品パンフレット・リーフレット 店舗用ポスター・POP
+                EC・SNS用の画像・バナー素材
+                ブランドイメージを踏まえたデザイン提案も可能で、店頭・オンライン双方の販売促進に活用いただけます。
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="bg-white rounded-md shadow p-6 flex flex-col items-center text-left animate-on-scroll opacity-0"
+              data-animate="animate__fadeInUp" style="--animate-duration: 0.9s; --animate-delay: 0.5s">
+              <div class="text-[12px] md:text-[20px] font-bold mb-2 sm:mb-4 md:mb-8 text-black text-center">
+                スタッフ向け教育 勉強会サポート
+              </div>
+              <div class="text-[12px] md:text-[16px] text-gray-700">
+                現場スタッフが製品の特徴や使用方法を正しく理解することで、顧客への説明や提案力が向上します。
+                導入時のオリエンテーション
+                店舗スタッフ・販売員向けの製品勉強会（オンライン／対面）
+                施術者・トレーナー向け活用セミナー こうしたサポートにより、
+                現場での接客品質と販売成果の向上を後押しします。
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="bg-white rounded-md shadow p-6 flex flex-col items-center text-left animate-on-scroll opacity-0"
+              data-animate="animate__fadeInUp" style="--animate-duration: 0.9s; --animate-delay: 0.7s">
+              <div class="text-[12px] md:text-[20px] font-bold mb-2 sm:mb-4 md:mb-8 text-black text-center">
+                販売データを活用した 継続フォロー・改善提案
+              </div>
+              <div class="text-[12px] md:text-[16px] text-gray-700">
+                導入後もパートナー企業とともに販売データや顧客の声を分析し、
+                販売傾向の把握 人気商品の特定や改善点の抽出
+                プロモーション施策の最適化
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guaranteed peace of mind and legal compliance -->
+    <section
+    class="border-t"
+    aria-label="安心保証・法令対応 | Guaranteed peace of mind and legal compliance"
+  >
+    <div
+      class="flex justify-center items-center w-full"
+      style="
+        background: url('./assets/images/safety.webp') center center / cover
+          no-repeat;
+      "
+    >
+      <div class="relative w-[820px] h-[860px] xl:text-[20px] mx-auto">
+        <!-- Top Circle -->
+        <div
+          class="absolute z-20 w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] xl:text-[20px] text-gray-800"
+          style="top: 50px; left: 50%; transform: translate(-50%, 0)"
+        >
+          安全性検査・<br />品質検査の実施と<br />報告書の提示
+        </div>
+
+        <!-- Triangle with text inside -->
+        <div class="triangle-container">
+          <div class="triangle">
+            <h2>安心保証・法令対応</h2>
+            <hr />
+            <p>
+              OEM・卸取引においては、製品の安全性と法令遵守対応を重要な基盤です。
+              当社では、原料から最終製品まで、国内外の基準に沿った品質管理と
+              法令対応を徹底し、安心してお取引いただける体制を整えています。
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Circles, spaced farther left and right -->
+        <div
+          class="absolute z-20 w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] xl:text-[20px] text-gray-800"
+          style="left: 90px; top: 720px; transform: translate(-50%, -50%)"
+        >
+          成分表示・<br />法令対応サポート
+        </div>
+        <div
+          class="absolute z-20 w-[180px] h-[180px] rounded-full bg-white shadow-lg flex justify-center items-center text-center leading-relaxed p-4 text-[14px] xl:text-[20px] text-gray-800"
+          style="left: 730px; top: 720px; transform: translate(-50%, -50%)"
+        >
+          安心して進められる<br />OEM・卸取引
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- FAQ（よくある質問） -->
+    <section class="border-t" aria-label="FAQ（よくある質問） | FAQ">
+      <div class="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 py-4 sm:py-8 md:py-12 text-center">
+        <div class="flex flex-col gap-6">
+          <p class="text-[15px] sm:text-[20px] md:text-[30px] font-bold tracking-[.05em] text-black animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" tabindex="0" style="--animate-duration: 1s">
+            FAQ（よくある質問）
+          </p>
+          <span
+            class="block w-[20px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto mt-3 md:mt-6 animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.35s"></span>
+          <div class="flex flex-col gap-4">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">MOQ（最小ロット）はどのくらいですか？</span>
+                <div class="faq-icon">
+                  <svg class="plus-icon" viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <svg class="minus-icon" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">
+                  回答をここに入力してください。
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">納期の目安を教えてください。</span>
+                <div class="faq-icon">
+                  <svg class="plus-icon" viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <svg class="minus-icon" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">
+                  回答をここに入力してください。
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">試作はできますか？ 費用はかかりますか？</span>
+                <div class="faq-icon">
+                  <svg class="plus-icon" viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <svg class="minus-icon" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">
+                  回答をここに入力してください。
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">配合変更や香りのカスタマイズはできますか？</span>
+                <div class="faq-icon">
+                  <svg class="plus-icon" viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <svg class="minus-icon" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">
+                  回答をここに入力してください。
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">費用構成はどのようになりますか？</span>
+                <div class="faq-icon">
+                  <svg class="plus-icon" viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <svg class="minus-icon" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">
+                  回答をここに入力してください。
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">製品の安定供給体制はありますか？</span>
+                <div class="faq-icon">
+                  <svg class="plus-icon" viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <svg class="minus-icon" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">
+                  回答をここに入力してください。
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">検査証明書（COA）やエビデンスは取得できますか？</span>
+                <div class="faq-icon">
+                  <svg class="plus-icon" viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <svg class="minus-icon" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">
+                  回答をここに入力してください。
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">ラベルデザインやパッケージ制作も依頼できますか？</span>
+                <div class="faq-icon">
+                  <svg class="plus-icon" viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <svg class="minus-icon" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">
+                  回答をここに入力してください。
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 9 -->
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">小ロット導入後、需要が増えた際に増産はできますか？</span>
+                <div class="faq-icon">
+                  <svg class="plus-icon" viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <svg class="minus-icon" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">
+                  回答をここに入力してください。
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 10 -->
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-question-text">支払い条件はどのようになりますか？</span>
+                <div class="faq-icon">
+                  <svg class="plus-icon" viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <svg class="minus-icon" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-text">
+                  回答をここに入力してください。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inquiries and quote requests -->
+    <section class="border-t" aria-label="お問い合わせ・見積依頼について | Inquiries and quote requests">
+      <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-4 sm:py-8 md:py-12 text-center">
+        <div class="mx-auto w-full text-center">
+          <h2
+            class="text-[15px] sm:text-[20px] md:text-[30px] font-semibold tracking-[.05em] text-gray-900 animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" tabindex="0" style="--animate-duration: 1s">
+            お問い合わせ・見積依頼について
+          </h2>
+          <span
+            class="block w-[20px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto mt-3 md:mt-8 animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.35s"></span>
+
+          <p class="mt-2 md:mt-8 mx-auto max-w-prose text-[12px] sm:text-[14px] md:text-[20px] leading-[30px] tracking-[.1em] text-gray-700 animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" tabindex="0" style="--animate-duration: 1s">
+            OEM製品・卸取引に関するご相談・お見積りは、ブランドごとに以下リンクよりお気軽にご連絡ください。
+            小ロットの試作から本格生産まで、幅広いご要望に対応いたします。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 w-full sm:gap-10 place-items-stretch mt-4 md:mt-10">
+          <!-- Ancient Lakes Magnesium Banner (slide-left + zoom) -->
+          <!-- Ancient Lakes Magnesium Banner (animated in from left, zoom, fade, each element animates in sequence) -->
+          <div
+            class="relative overflow-hidden w-full lg:w-full h-[114px] sm:h-[250px] md:h-[250px] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" style="--animate-duration: 1.2s">
+            <img src="./assets/images/left.webp"
+              alt="TEWA ブランド製品 - 古代湖マグネシウム | TEWA Brand Product - Ancient Lakes Magnesium"
+              class="absolute inset-0 w-full h-full object-cover brand-cinematic" />
+            <div class="absolute inset-0"></div>
+            <div class="absolute md:px-[45px] md:py-[16px] px-[13px] py-[17px]">
+              <img src="./assets/images/sub-left.webp"
+                alt="TEWA ブランドマーク - サステナブルな取り組み | TEWA Brand Mark - Sustainable initiatives"
+                class="w-[85px] h-[38px] md:w-[245px] md:h-[109px] mx-auto" />
+            </div>
+            <div class="absolute bottom-0 sm:bottom-0 right-0 flex animate-on-scroll opacity-0"
+              data-animate="animate__fadeInUp" style="--animate-duration: 1.15s">
+              <div
+                class="flex flex-col gap-1 backdrop-blur-sm max-w-[400px] w-full h-[40px] bg-[#AAAAAA]/20 flex items-center my-[10px] px-[30px] md:my-[29px]">
+                <p class="text-white font-bold px-3 text-[16px] sm:text-[20px] leading-relaxed w-full">
+                  オーストラリアマグネシウム製品
+                </p>
+                <div class="w-[110%] relative h-[1.5px] bg-white">
+                  <div class="w-[14%] absolute right-[-7%] bg-white rotate-[30deg]">
+                    <div class="w-1/2 h-[1.5px] bg-white absolute"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative overflow-hidden w-full lg:w-full h-[114px] sm:h-[250px] md:h-[250px] animate-on-scroll opacity-0"
+            data-animate="animate__fadeInUp" style="--animate-duration: 1.2s">
+            <img src="./assets/images/right.webp"
+              alt="TEWA ブランド製品 - 古代湖マグネシウム | TEWA Brand Product - Ancient Lakes Magnesium"
+              class="absolute inset-0 w-full h-full object-cover brand-cinematic" />
+            <div class="absolute inset-0"></div>
+            <div class="absolute md:px-[45px] md:py-[16px] px-[13px] py-[17px]">
+              <img src="./assets/images/sub-right.webp"
+                alt="TEWA ブランドマーク - サステナブルな取り組み | TEWA Brand Mark - Sustainable initiatives"
+                class="w-[85px] h-[38px] md:w-[245px] md:h-[109px] mx-auto" />
+            </div>
+            <div class="absolute bottom-0 sm:bottom-0 right-0 flex animate-on-scroll opacity-0"
+              data-animate="animate__fadeInUp" style="--animate-duration: 1.15s">
+              <div
+                class="flex flex-col gap-1 backdrop-blur-sm max-w-[400px] w-full h-[40px] bg-[#AAAAAA]/20 flex items-center my-[10px] px-[30px] md:my-[29px]">
+                <p class="text-white font-bold px-3 text-[16px] sm:text-[20px] leading-relaxed w-full">
+                  クリスマス島の塩
+                </p>
+                <div class="w-[110%] relative h-[1.5px] bg-white">
+                  <div class="w-[14%] absolute right-[-7%] bg-white rotate-[30deg]">
+                    <div class="w-1/2 h-[1.5px] bg-white absolute"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-[#1A2C47] text-white">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Desktop Layout: Horizontal -->
+      <div class="hidden lg:flex items-center justify-between">
+        <!-- Logo with underline -->
+        <div class="relative">
+          <h2 class="text-4xl font-bold">TEWA</h2>
+          <div class="flex items-center justify-center gap-4 mt-4 ml-1">
+            <!-- Instagram -->
+            <a href="#"
+              class="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+              <iconify-icon icon="mdi:instagram" class="w-4 h-4"></iconify-icon>
+            </a>
+            <!-- Facebook -->
+            <a href="#"
+              class="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+              <iconify-icon icon="mdi:facebook" class="w-4 h-4"></iconify-icon>
+            </a>
+            <!-- LINE -->
+            <a href="#"
+              class="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+              <iconify-icon icon="simple-icons:line" class="w-4 h-4"></iconify-icon>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex items-center gap-8">
+          <a href="./about.html" class="text-[14px] hover:text-gray-300 transition-colors text">会社概要</a>
+          <a href="./tewa-story.html" class="text-[14px] hover:text-gray-300 transition-colors text">TEWA STORY</a>
+          <a href="./blog.html" class="text-[14px] hover:text-gray-300 transition-colors text">メディア掲載</a>
+          <a href="#" class="text-[14px] hover:text-gray-300 transition-colors text">OEM・卸</a>
+          <a href="#" class="text-[14px] hover:text-gray-300 transition-colors text">リンク集</a>
+          <a href="#" class="text-[14px] hover:text-gray-300 transition-colors text">お知らせ</a>
+          <a href="#" class="text-[14px] hover:text-gray-300 transition-colors text">社会貢献</a>
+          <a href="#" class="text-[14px] hover:text-gray-300 transition-colors text">お問い合わせ</a>
+        </nav>
+        <!-- Social Media Icons -->
+      </div>
+
+      <!-- Mobile Layout: Vertical Stack -->
+      <div class="lg:hidden">
+        <!-- Top Section: Logo and Social Media -->
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold mb-4">TEWA</h2>
+          <div class="flex items-center justify-center gap-3">
+            <!-- Instagram -->
+            <a href="#"
+              class="w-4 h-4 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+              <iconify-icon icon="mdi:instagram" class="w-4 h-4"></iconify-icon>
+            </a>
+            <!-- Facebook -->
+            <a href="#"
+              class="w-4 h-4 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+              <iconify-icon icon="mdi:facebook" class="w-4 h-4"></iconify-icon>
+            </a>
+            <!-- LINE -->
+            <a href="#"
+              class="w-4 h-4 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#1A2C47] transition-colors">
+              <iconify-icon icon="simple-icons:line" class="w-4 h-4"></iconify-icon>
+            </a>
+          </div>
+        </div>
+
+        <!-- Divider Line -->
+
+        <!-- Middle Section: Navigation Links in 4 columns -->
+        <div class="grid grid-cols-4 gap-x-2 gap-y-3 mb-6 max-w-lg mx-auto">
+          <a href="./about.html" class="text-[10px] hover:text-gray-300 transition-colors text-center">会社概要</a>
+          <a href="./tewa-story.html" class="text-[10px] hover:text-gray-300 transition-colors text-center">TEWA
+            STORY</a>
+          <a href="./blog.html" class="text-[10px] hover:text-gray-300 transition-colors text-center">メディア掲載</a>
+          <a href="#" class="text-[10px] hover:text-gray-300 transition-colors text-center">OEM・卸</a>
+          <a href="#" class="text-[10px] hover:text-gray-300 transition-colors text-center">リンク集</a>
+          <a href="#" class="text-[10px] hover:text-gray-300 transition-colors text-center">お知らせ</a>
+          <a href="#" class="text-[10px] hover:text-gray-300 transition-colors text-center">社会貢献</a>
+          <a href="#" class="text-[10px] hover:text-gray-300 transition-colors text-center">お問い合わせ</a>
+        </div>
+
+        <!-- Divider Line -->
+        <div class="border-t border-gray-400 mb-6"></div>
+      </div>
+
+      <!-- Divider Line (Desktop) -->
+      <div class="hidden lg:block border-t border-gray-400 my-8"></div>
+
+      <!-- Bottom Section: Copyright -->
+      <div class="text-center">
+        <p class="text-xs text-[10px] sm:text-[12px] md:text-[14px] text-gray-300">
+          Copyright © <span id="year"></span> TEWA co.ltd All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/main.js"></script>
+  <script>
+    // Animate elements when they enter viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("opacity-0", "translate-y-8");
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll(".fade-section").forEach((el) => {
+      observer.observe(el);
+    });
+
+    // FAQ Accordion functionality
+    document.querySelectorAll(".faq-question").forEach((question) => {
+      question.addEventListener("click", function () {
+        const faqItem = this.closest(".faq-item");
+        const isActive = faqItem.classList.contains("active");
+
+        // Close all FAQ items
+        document.querySelectorAll(".faq-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // If the clicked item wasn't active, open it
+        if (!isActive) {
+          faqItem.classList.add("active");
+        }
+      });
+    });
+
+    var featuredThumbsSwiper = new Swiper(".featured-thumbs-swiper", {
+      direction: window.innerWidth < 768 ? 'horizontal' : 'vertical',
+      spaceBetween: 10,
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      loop: false,
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+      centeredSlides: false,
+      slideToClickedSlide: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    var featuredSwiper = new Swiper(".featured-swiper", {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      loop: true,
+      loopedSlides: 4,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+      },
+      speed: 2000,
+      pagination: {
+        el: '.featured-swiper .swiper-pagination',
+        clickable: true,
+        type: 'bullets',
+      },
+      thumbs: {
+        swiper: featuredThumbsSwiper,
+        slideThumbActiveClass: 'swiper-slide-thumb-active',
+      },
+    });
+
+    var featuredThumbsSwiper1 = new Swiper(".featured-thumbs-swiper-1", {
+      direction: window.innerWidth < 768 ? 'horizontal' : 'vertical',
+      spaceBetween: 10,
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      loop: false,
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+      centeredSlides: false,
+      slideToClickedSlide: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    var featuredSwiper1 = new Swiper(".featured-swiper-1", {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      loop: true,
+      loopedSlides: 4,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+      },
+      speed: 2000,
+      pagination: {
+        el: '.featured-swiper-1 .swiper-pagination',
+        clickable: true,
+        type: 'bullets',
+      },
+      thumbs: {
+        swiper: featuredThumbsSwiper1,
+        slideThumbActiveClass: 'swiper-slide-thumb-active',
+      },
+    });
+
+  </script>
+
+</body>
+
+</html>

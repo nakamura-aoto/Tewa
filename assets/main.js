@@ -2,6 +2,45 @@
 window.__fadeSliderActive = true;
 
 document.addEventListener('DOMContentLoaded', () => {
+	// swiper
+
+
+	var featuredThumbsSwiper = new Swiper(".featured-thumbs-swiper", {
+		direction: window.innerWidth < 768 ? 'horizontal' : 'vertical',
+		spaceBetween: 10,
+		slidesPerView: 3,
+		slidesPerGroup: 3,
+		loop: true,
+		// loopFillGroupWithBlank: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+
+	var featuredSwiper = new Swiper(".featured-swiper", {
+		spaceBetween: 10,
+		slidesPerView: 1,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		loop: true,
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false
+		},
+		speed: 2000,
+		pagination: {
+			el: '.featured-swiper .swiper-pagination',
+			clickable: true,
+			type: 'bullets',
+		},
+		thumbs: {
+			swiper: featuredThumbsSwiper,
+		},
+	});
+
+
+
 	const yearEl = document.getElementById('year');
 	if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
 
@@ -391,11 +430,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Update animation to continue from manual scroll position
 		function syncAnimationFromPosition() {
 			if (isDragging) return;
-			
+
 			// Use requestAnimationFrame for smooth transition
 			requestAnimationFrame(() => {
 				if (isDragging) return;
-				
+
 				const currentPos = getAnimationPosition();
 				const containerWidth = scrollContainer.scrollWidth / 2;
 
@@ -405,9 +444,9 @@ document.addEventListener('DOMContentLoaded', () => {
 					normalizedPos -= containerWidth;
 				}
 				const percent = Math.abs(normalizedPos) / containerWidth;
-				
+
 				// Set animation delay to sync with current position
-				
+
 				// Use requestAnimationFrame again to ensure smooth transition
 				requestAnimationFrame(() => {
 					// Clear inline transform to let CSS animation take over smoothly
@@ -510,30 +549,30 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Helper function to pause animation and freeze position
 		function pauseAnimation() {
 			if (isDragging || isHovering) return;
-			
+
 			// Clear any pending resume timeout
 			if (resumeTimeout) {
 				clearTimeout(resumeTimeout);
 				resumeTimeout = null;
 			}
-			
+
 			isHovering = true;
 			scrollContainer.classList.add('paused');
-			
+
 			// Use requestAnimationFrame to ensure smooth freeze
 			requestAnimationFrame(() => {
 				if (isDragging) return;
-				
+
 				// Capture current animation position and freeze it
 				const currentPos = getAnimationPosition();
 				const containerWidth = scrollContainer.scrollWidth / 2;
-				
+
 				// Calculate the actual position within the loop
 				let frozenPos = currentPos % containerWidth;
 				if (frozenPos > 0) {
 					frozenPos -= containerWidth;
 				}
-				
+
 				// Apply frozen position directly via transform using translate3d
 				scrollContainer.style.transform = `translate3d(${frozenPos}px, 0, 0)`;
 				scrollContainer.style.transition = 'none'; // Prevent transition during freeze
@@ -544,19 +583,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Helper function to resume animation
 		function resumeAnimation() {
 			if (isDragging) return;
-			
+
 			isHovering = false;
-			
+
 			// Use requestAnimationFrame for smooth resumption
 			requestAnimationFrame(() => {
 				if (isDragging) return;
-				
+
 				// Ensure no transition interference
 				scrollContainer.style.transition = 'none';
-				
+
 				// Sync animation from current frozen position
 				syncAnimationFromPosition();
-				
+
 				// Remove paused class to resume CSS animation
 				requestAnimationFrame(() => {
 					scrollContainer.classList.remove('paused');
@@ -566,10 +605,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Also pause when hovering over individual images
 		const productImages = scrollContainer.querySelectorAll('.product-image-hover');
-		
+
 		// Track mouse position relative to container
 		let mouseOverContainer = false;
-		
+
 		// Pause on hover - capture current position and freeze animation
 		scrollContainer.addEventListener('mouseenter', () => {
 			mouseOverContainer = true;
@@ -580,7 +619,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 			pauseAnimation();
 		});
-		
+
 		scrollContainer.addEventListener('mouseleave', () => {
 			mouseOverContainer = false;
 			// Clear any existing timeout and resume immediately
@@ -592,7 +631,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				resumeAnimation();
 			}
 		});
-		
+
 		productImages.forEach(img => {
 			img.addEventListener('mouseenter', () => {
 				if (!isDragging) {
@@ -604,7 +643,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					pauseAnimation();
 				}
 			});
-			
+
 			img.addEventListener('mouseleave', () => {
 				// Use requestAnimationFrame for immediate check after event bubbling
 				requestAnimationFrame(() => {
@@ -820,7 +859,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Find navigation buttons and dots
 	const prevBtn = document.getElementById('slidePrev');
 	const nextBtn = document.getElementById('slideNext');
-	
+
 	// Function to get dots dynamically (they may be created after this code runs)
 	function getDotButtons() {
 		return Array.from(document.querySelectorAll('.slider-dot'));
@@ -931,9 +970,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	sliderTrack.addEventListener('mousedown', onPointerDown);
 	window.addEventListener('mousemove', onPointerMove);
 	window.addEventListener('mouseup', onPointerUp);
-	
+
 	// Handle mouse leave during drag
-	sliderTrack.addEventListener('mouseleave', function(e) {
+	sliderTrack.addEventListener('mouseleave', function (e) {
 		if (isDragging) {
 			// Trigger pointer up when mouse leaves while dragging
 			onPointerUp(e);
@@ -959,10 +998,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 		goToSlide(0);
 	}
-	
+
 	// Start initialization
 	setTimeout(initializeSlider, 200);
-	
+
 	// Function to sync currentSlide from transform
 	function syncSlideFromTransform() {
 		const transform = window.getComputedStyle(sliderTrack).transform;
@@ -986,44 +1025,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Sync currentSlide from transform and update dots when transition ends
 	// This ensures dots are correct after button clicks or swipes
-	sliderTrack.addEventListener('transitionend', function(e) {
+	sliderTrack.addEventListener('transitionend', function (e) {
 		// Only process transitionend for transform property
 		if (e.propertyName !== 'transform') return;
-		
+
 		// Sync slide and update dots
 		syncSlideFromTransform();
 		updateDots();
 	});
-	
+
 	// Sync after button clicks - listen to button clicks and update dots after animation
 	// Use requestAnimationFrame to check transform after first slider updates
 	if (prevBtn) {
-		prevBtn.addEventListener('click', function() {
+		prevBtn.addEventListener('click', function () {
 			// Use multiple checkpoints to ensure we catch the update
-			requestAnimationFrame(function() {
-				requestAnimationFrame(function() {
+			requestAnimationFrame(function () {
+				requestAnimationFrame(function () {
 					syncSlideFromTransform();
 					updateDots();
 				});
 			});
 			// Also sync after transition completes
-			setTimeout(function() {
+			setTimeout(function () {
 				syncSlideFromTransform();
 				updateDots();
 			}, 1350);
 		});
 	}
 	if (nextBtn) {
-		nextBtn.addEventListener('click', function() {
+		nextBtn.addEventListener('click', function () {
 			// Use multiple checkpoints to ensure we catch the update
-			requestAnimationFrame(function() {
-				requestAnimationFrame(function() {
+			requestAnimationFrame(function () {
+				requestAnimationFrame(function () {
 					syncSlideFromTransform();
 					updateDots();
 				});
 			});
 			// Also sync after transition completes
-			setTimeout(function() {
+			setTimeout(function () {
 				syncSlideFromTransform();
 				updateDots();
 			}, 1350);
@@ -1046,7 +1085,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const MIN_VELOCITY = 0.05; // px/ms threshold to stop
 
 	// Use a wrapper if overflow hidden is on outer container
-	if(!slider) return;
+	if (!slider) return;
 	const parent = slider.parentElement;
 	slider.style.transition = "none";
 
