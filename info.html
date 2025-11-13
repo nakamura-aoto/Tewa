@@ -540,43 +540,47 @@
         </p>
       </div>
 
-      <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-4 sm:py-8 md:py-12 text-center">
-        <svg viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
-          <!-- LEFT BOX (Right slanted edge, top wider) -->
-          <path d="M0 0 L405 0 L345 220 L0 220 Z" />
-          <foreignObject x="0" y="0" width="360" height="220">
-            <div class="flex flex-col items-center justify-center w-full h-full p-2 gap-2">
-              <h4 class="text-[14px] xs:text-[18px] md:text-[22px] font-bold text-black animate-on-scroll opacity-0"
-                data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.08s;">
-                TEWAコーポレーションの特徴
-              </h4>
-              <span
-                class="block w-[20px] xs:w-[24px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto my-2 md:my-4 animate-on-scroll opacity-0"
-                data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.18s"></span>
-              <div class="flex items-center gap-4 sm:gap-6">
-                <img src="./assets/images/sub-left.webp" alt="TEWAコーポレーションの特徴"
-                  class="w-[140px] h-[40px] sm:w-[200px] sm:h-[50px] animate-on-scroll opacity-0"
-                  data-animate="animate__fadeInLeft" style="--animate-duration: .9s; --animate-delay: 0.3s;" />
-                <img src="./assets/images/sub-right.webp" alt="TEWAコーポレーションの特徴"
-                  class="w-[140px] h-[40px] sm:w-[200px] sm:h-[50px] animate-on-scroll opacity-0"
-                  data-animate="animate__fadeInRight" style="--animate-duration: .9s; --animate-delay: 0.5s;" />
-              </div>
-            </div>
-          </foreignObject>
-
-          <!-- RIGHT BOX (Left slanted edge, top narrower) -->
-          <path d="M415 0 L800 0 L800 220 L355 220 Z" />
-          <foreignObject x="415" y="0" width="400" height="220">
-            <div class="flex justify-center items-center w-full h-full p-1">
-              <p class="text-[12px] sm:text-[14px] font-light leading-[20px] text-center text-gray-700 animate-on-scroll opacity-0"
-                data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.15s;">
-                テワコーポレイションは、オーストラリア・デボラ湖（Lake
-                Deborah）やクリスマス島など、自然環境に恵まれた地域から採取される高純度ミネラル原料を日本市場へ届けています。マグネシウムや海塩などの天然素材の輸入・研究・商品化・ブランディングまで一貫体制で展開し、健康食品・化粧品・食品分野における「自然由来」「安心・安全」「高機能性」を重視した製品開発を支援しています。素材のバックグラウンドや環境への配慮を大切にし、<strong>“自然を科学する”</strong>という理念のもと、持続可能なものづくりを推進しています。
-              </p>
-            </div>
-          </foreignObject>
+      <div class="relative mx-auto max-w-[1440px] px-2 sm:px-4 lg:px-8 py-4 sm:py-8 md:py-12">
+        <!-- SVG background layer -->
+        <svg viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 z-0">
+          <path d="M0 0 L405 0 L345 220 L0 220 Z" fill="#f7f7f7" />
+          <path d="M415 0 L800 0 L800 220 L355 220 Z" fill="#ffffff" />
         </svg>
+
+        <!-- Responsive content layout -->
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-14 xl:gap-16 text-center">
+
+          <!-- LEFT SECTION -->
+          <div class="flex flex-col items-center justify-center w-full md:w-[80%] lg:w-[40%] xl:w-[36%] p-4">
+            <h4 class="text-[14px] xs:text-[18px] md:text-[22px] font-bold text-black animate-on-scroll opacity-0"
+              data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.08s;">
+              TEWAコーポレーションの特徴
+            </h4>
+            <span
+              class="block w-[20px] xs:w-[24px] sm:w-[30px] md:w-[50px] h-[1px] bg-gray-800 mx-auto my-2 md:my-4 animate-on-scroll opacity-0"
+              data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.18s"></span>
+            <div class="flex items-center justify-center gap-4 sm:gap-6">
+              <img src="./assets/images/sub-left.webp" alt="TEWAコーポレーションの特徴"
+                class="w-[200px] h-[70px] sm:w-[200px] sm:h-[50px] animate-on-scroll opacity-0"
+                data-animate="animate__fadeInLeft" style="--animate-duration: .9s; --animate-delay: 0.3s;" />
+              <img src="./assets/images/sub-right.webp" alt="TEWAコーポレーションの特徴"
+                class="w-[200px] h-[70px] sm:w-[200px] sm:h-[50px] animate-on-scroll opacity-0"
+                data-animate="animate__fadeInRight" style="--animate-duration: .9s; --animate-delay: 0.5s;" />
+            </div>
+          </div>
+
+          <!-- RIGHT SECTION -->
+          <div class="flex justify-center items-center w-full md:w-[90%] lg:w-[43%] xl:w-[36%] p-4">
+            <p class="text-[12px] sm:text-[14px] font-light leading-[20px] text-gray-700 animate-on-scroll opacity-0"
+              data-animate="animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: 0.15s;">
+              テワコーポレイションは、オーストラリア・デボラ湖（Lake
+              Deborah）やクリスマス島など、自然環境に恵まれた地域から採取される高純度ミネラル原料を日本市場へ届けています。マグネシウムや海塩などの天然素材の輸入・研究・商品化・ブランディングまで一貫体制で展開し、健康食品・化粧品・食品分野における「自然由来」「安心・安全」「高機能性」を重視した製品開発を支援しています。素材のバックグラウンドや環境への配慮を大切にし、<strong>“自然を科学する”</strong>という理念のもと、持続可能なものづくりを推進しています。
+            </p>
+          </div>
+
+        </div>
       </div>
+
     </section>
 
     <!-- Wholesale and OEM information for magnesium products -->
