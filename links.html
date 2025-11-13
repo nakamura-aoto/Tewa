@@ -143,13 +143,6 @@
         transform: translate3d(0, 0, 0);
       }
 
-      /* Enhanced parallax effect for images - optimized for simple-parallax-js */
-      .ja-parallax {
-        will-change: transform;
-        backface-visibility: hidden;
-        /* simple-parallax-js will handle transforms */
-      }
-
       /* Enhanced image animation with parallax support */
       .animate-image {
         opacity: 0;
@@ -484,7 +477,7 @@
           <img
             src="./assets/images/links.webp"
             alt="リンク集 メインビジュアル | Links | Main Visual"
-            class="w-full h-[640px] sm:h-[560px] md:h-[756px] object-cover select-none ja-parallax"
+            class="w-full h-[640px] sm:h-[560px] md:h-[756px] object-cover select-none"
           />
           <!-- Centered Card Overlay -->
           <div
@@ -608,7 +601,7 @@
                 厚生労働省や消費者庁など、法令遵守や適正表示に関する最新情報を確認できます。
               </p>
               <ul class="flex flex-col gap-2 w-full mt-4 sm:mt-6 ml-2 sm:ml-4">
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
@@ -620,6 +613,34 @@
                     href="#"
                     class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
                     >厚生労働省</a
+                  >
+                </li>
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.15s;">
+                  <img
+                    src="./assets/images/link_icon.webp"
+                    alt="リンクアイコン"
+                    width="20"
+                    height="20"
+                    class="shrink-0 mt-[2px] inline-block align-middle"
+                  />
+                  <a
+                    href="#"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    >農林水産省（塩に関する情報）</a
+                  >
+                </li>
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.3s;">
+                  <img
+                    src="./assets/images/link_icon.webp"
+                    alt="リンクアイコン"
+                    width="20"
+                    height="20"
+                    class="shrink-0 mt-[2px] inline-block align-middle"
+                  />
+                  <a
+                    href="#"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    >食品安全委員会</a
                   >
                 </li>
               </ul>
@@ -642,7 +663,7 @@
                 科学的根拠に基づいた知見を理解することで、製品開発や情報発信の信頼性を高めます。
               </p>
               <ul class="flex flex-col gap-2 w-full mt-4 sm:mt-6 ml-2 sm:ml-4">
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.15s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
@@ -656,7 +677,7 @@
                     >国立環境研究所（NIES）</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.3s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
@@ -690,7 +711,7 @@
                 各業界のルールや公正取引、成分分析基準などを確認する際に活用できます。
               </p>
               <ul class="flex flex-col gap-2 w-full mt-4 sm:mt-6 ml-2 sm:ml-4">
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.08s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
@@ -704,7 +725,7 @@
                     >一般社団法人 日本塩協会</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.18s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
@@ -718,7 +739,7 @@
                     >公益財団法人 塩事業センター</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.28s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
@@ -732,7 +753,7 @@
                     >般社団法人 日本食品分析センター</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.38s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
@@ -766,7 +787,7 @@
                 健康維持に必要なミネラルの働きや、食生活改善の参考情報としてご覧ください。
               </p>
               <ul class="flex flex-col gap-2 w-full mt-4 sm:mt-6 ml-2 sm:ml-4">
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.10s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
@@ -780,7 +801,7 @@
                     >健康日本21アクション支援システム</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.20s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
@@ -794,7 +815,7 @@
                     >健康長寿ネット</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.30s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
@@ -828,45 +849,51 @@
                 海洋保全や資源循環など、持続可能な社会の実現に向けた国内の取組を紹介します。
               </p>
               <ul class="flex flex-col gap-2 w-full mt-4 sm:mt-6 ml-2 sm:ml-4">
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.10s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.9s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.9s;"
                     >環境省</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.22s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.9s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.9s;"
                     >SDGsジャパン</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.34s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.9s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.9s;"
                     >海と日本プロジェクト</a
                   >
                 </li>
@@ -890,59 +917,67 @@
                 自然素材へのこだわりや品質管理体制など、自社の理念と共通する点が多い分野です。
               </p>
               <ul class="flex flex-col gap-2 w-full mt-4 sm:mt-6 ml-2 sm:ml-4">
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.10s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.9s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.9s;"
                     >ジャパンソルト株式会社</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.18s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.9s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.9s;"
                     >商船三井クルーズ株式会社</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.26s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.9s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.9s;"
                     >一村一品マーケット</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.34s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.9s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.9s;"
                     >株式会社タニタフィッツミー</a
                   >
                 </li>
@@ -966,87 +1001,99 @@
                 マグネシウム製品や天然塩シリーズ、OEM・卸事業など、各ブランドの理念と取扱商品を一覧できます。
               </p>
               <ul class="flex flex-col gap-2 w-full mt-4 sm:mt-6 ml-2 sm:ml-4">
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.08s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.8s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.8s;"
                     >テワコーポレイション株式会社</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.18s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.8s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.8s;"
                     >クリスマス島の海の塩ブランドサイト</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.28s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.8s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.8s;"
                     >ANCIENT LAKES MAGNESIUM</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.38s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.8s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.8s;"
                     >MAG21研究会</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.48s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.8s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.8s;"
                     >ピュアマグネシウム</a
                   >
                 </li>
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 animate-on-scroll opacity-0" data-animate="animate__fadeInUp" style="animation-delay: 0.58s;">
                   <img
                     src="./assets/images/link_icon.webp"
                     alt="リンクアイコン"
                     width="20"
                     height="20"
-                    class="shrink-0 mt-[2px] inline-block align-middle"
+                    class="shrink-0 mt-[2px] inline-block align-middle animate__animated animate__fadeInLeft"
+                    style="animation-duration: 0.8s;"
                   />
                   <a
                     href="#"
-                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg"
+                    class="text-gray-800 underline hover:text-brand transition-colors text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight"
+                    style="animation-duration: 0.8s;"
                     >Instagram</a
                   >
                 </li>
