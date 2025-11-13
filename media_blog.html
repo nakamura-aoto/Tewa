@@ -220,51 +220,38 @@
     </section>
 
     <section aria-label="メディア掲載内容 | Media Coverage Content" class="mx-auto max-w-[1440px]">
-      <div class="flex justify-evenly mx-auto max-w-[1440px] px-2 sm:px-4 lg:px-8 py-4 sm:py-8 md:py-12">
+      <div class="hidden md:flex justify-evenly mx-auto max-w-[1440px] px-2 sm:px-4 lg:px-8 py-4 sm:py-14 md:py-20">
         <p class="text-[14px] md:text-[16px] lg:text-[30px] text-gray-700 hover:text-gray-900">全て見る</p>
         <p class="text-[14px] md:text-[16px] lg:text-[30px] text-gray-700 hover:text-gray-900">お知らせ</p>
         <p class="text-[14px] md:text-[16px] lg:text-[30px] text-gray-700 hover:text-gray-900">社会貢献活動</p>
       </div>
       <div class="grid gap-4 p-4">
         <!-- Blog Entry 1 -->
-        <div class="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-4 border-t border-gray-300 pt-4 animate-on-scroll"
+        <div class="grid grid-cols-1 md:grid-cols-[40%,60%] gap-4 border-t border-gray-300 pt-8 animate-on-scroll"
           tabindex="0" data-animate="animate__fadeInUp">
           <img src="./assets/images/instagram1.webp"
-            class="w-[300px] h-[150px] lg:w-[485px] lg:h-[215px] object-cover rounded-t-lg"
-            alt="メディア掲載1 | Media Coverage 1">
-          <div class="flex flex-col justify-between m-6">
-            <div class="flex md:items-center gap-3">
-              <span class="text-gray-900">2024.04.08</span>
-              <span
-                class="bg-[#223a65] text-[10px] md:text-[14px] text-white py-[1px] px-2 ml-14 rounded-sm">メディア掲載</span>
+            class="w-full md:w-full h-[150px] md:h-[215px] lg:h-[215px] object-cover rounded-sm" alt="メディア掲載1 | Media Coverage 1">
+          <div class="flex flex-col justify-between p-2 md:p-6 w-full md:w-full gap-4">
+            <div class="flex md:items-center gap-20 justify-between md:justify-start">
+              <span class="text-gray-900 text-[12px] md:text-[16px]">2024.04.08</span>
+              <span class="bg-[#223a65] text-[10px] md:text-[14px] text-white py-[3px] px-2 rounded-sm">メディア掲載</span>
             </div>
-            <p class="text-gray-700">これはサンプル本文です。</p>
-            <div class="flex justify-end items-center">
+            <p class="text-black text-[16px] md:text-[30px]">これはサンプル本文です。</p>
+            <div class="hidden md:flex justify-end items-center">
               <span
-                class="bg-[#223a65] text-[10px] md:text-[14px] text-white py-[1px] px-2 ml-14 rounded-sm">メディア掲載</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-4 border-t border-gray-300 pt-4 animate-on-scroll"
-          tabindex="0" data-animate="animate__fadeInUp">
-          <img src="./assets/images/instagram1.webp"
-            class="w-[300px] h-[150px] lg:w-[485px] lg:h-[215px] object-cover rounded-t-lg"
-            alt="メディア掲載1 | Media Coverage 1">
-          <div class="flex flex-col justify-between m-6">
-            <div class="flex md:items-center gap-3">
-              <span class="text-gray-900">2024.04.08</span>
-              <span
-                class="bg-[#223a65] text-[10px] md:text-[14px] text-white py-[1px] px-2 ml-14 rounded-sm">メディア掲載</span>
-            </div>
-            <p class="text-gray-700">これはサンプル本文です。</p>
-            <div class="flex justify-end items-center">
-              <span
-                class="bg-[#223a65] text-[10px] md:text-[14px] text-white py-[1px] px-2 ml-14 rounded-sm">メディア掲載</span>
+                class="bg-[#223a65] text-[10px] md:text-[12px] text-white py-[3px] px-2 rounded-sm flex items-center gap-1">
+                もっと見る
+                <svg class="text-white ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="10"
+                  height="10" fill="none" viewBox="0 0 10 10">
+                  <path d="M2 1l5 4-5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
             </div>
           </div>
         </div>
       </div>
+
       <hr class="border-t border-gray-300" />
       <!-- add pagination -->
       <div class="flex justify-center items-center px-6 py-10 gap-2">
