@@ -221,22 +221,46 @@
 
     <section aria-label="メディア掲載内容 | Media Coverage Content" class="mx-auto max-w-[1440px]">
       <div class="hidden md:flex justify-evenly mx-auto max-w-[1440px] px-2 sm:px-4 lg:px-8 py-4 sm:py-14 md:py-20">
-        <p class="text-[14px] md:text-[16px] lg:text-[30px] text-gray-700 hover:text-gray-900">全て見る</p>
-        <p class="text-[14px] md:text-[16px] lg:text-[30px] text-gray-700 hover:text-gray-900">お知らせ</p>
-        <p class="text-[14px] md:text-[16px] lg:text-[30px] text-gray-700 hover:text-gray-900">社会貢献活動</p>
+        <button id="filterAll" class="filter-btn text-[14px] md:text-[16px] lg:text-[30px] text-gray-700 hover:text-gray-900 transition-colors cursor-pointer bg-transparent border-none active" data-category="all">全て見る</button>
+        <button id="filterAnnouncement" class="filter-btn text-[14px] md:text-[16px] lg:text-[30px] text-gray-700 hover:text-gray-900 transition-colors cursor-pointer bg-transparent border-none" data-category="お知らせ">お知らせ</button>
+        <button id="filterSocial" class="filter-btn text-[14px] md:text-[16px] lg:text-[30px] text-gray-700 hover:text-gray-900 transition-colors cursor-pointer bg-transparent border-none" data-category="社会貢献活動">社会貢献活動</button>
       </div>
-      <div class="grid gap-4 p-4">
+      <div id="articlesContainer" class="grid gap-4 p-4">
         <!-- Blog Entry 1 -->
-        <div class="grid grid-cols-1 md:grid-cols-[40%,60%] gap-4 border-t border-gray-300 pt-8 animate-on-scroll"
-          tabindex="0" data-animate="animate__fadeInUp">
+        <div class="blog-entry grid grid-cols-1 md:grid-cols-[40%,60%] gap-4 border-t border-gray-300 pt-8 animate-on-scroll"
+          tabindex="0" data-animate="animate__fadeInUp" data-category="お知らせ">
           <img src="./assets/images/instagram1.webp"
             class="w-full md:w-full h-[150px] md:h-[215px] lg:h-[215px] object-cover rounded-sm" alt="メディア掲載1 | Media Coverage 1">
           <div class="flex flex-col justify-between p-2 md:p-6 w-full md:w-full gap-4">
             <div class="flex md:items-center gap-20 justify-between md:justify-start">
               <span class="text-gray-900 text-[12px] md:text-[16px]">2024.04.08</span>
-              <span class="bg-[#223a65] text-[10px] md:text-[14px] text-white py-[3px] px-2 rounded-sm">メディア掲載</span>
+              <span class="bg-[#223a65] text-[10px] md:text-[14px] text-white py-[3px] px-2 rounded-sm">お知らせ</span>
             </div>
             <p class="text-black text-[16px] md:text-[30px]">これはサンプル本文です。</p>
+            <div class="hidden md:flex justify-end items-center">
+              <span
+                class="bg-[#223a65] text-[10px] md:text-[12px] text-white py-[3px] px-2 rounded-sm flex items-center gap-1">
+                もっと見る
+                <svg class="text-white ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="10"
+                  height="10" fill="none" viewBox="0 0 10 10">
+                  <path d="M2 1l5 4-5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- Blog Entry 2 - 社会貢献活動 -->
+        <div class="blog-entry grid grid-cols-1 md:grid-cols-[40%,60%] gap-4 border-t border-gray-300 pt-8 animate-on-scroll"
+          tabindex="0" data-animate="animate__fadeInUp" data-category="社会貢献活動">
+          <img src="./assets/images/instagram2.webp"
+            class="w-full md:w-full h-[150px] md:h-[215px] lg:h-[215px] object-cover rounded-sm" alt="メディア掲載2 | Media Coverage 2">
+          <div class="flex flex-col justify-between p-2 md:p-6 w-full md:w-full gap-4">
+            <div class="flex md:items-center gap-20 justify-between md:justify-start">
+              <span class="text-gray-900 text-[12px] md:text-[16px]">2024.03.15</span>
+              <span class="bg-[#223a65] text-[10px] md:text-[14px] text-white py-[3px] px-2 rounded-sm">社会貢献活動</span>
+            </div>
+            <p class="text-black text-[16px] md:text-[30px]">社会貢献活動のサンプル記事です。</p>
             <div class="hidden md:flex justify-end items-center">
               <span
                 class="bg-[#223a65] text-[10px] md:text-[12px] text-white py-[3px] px-2 rounded-sm flex items-center gap-1">
@@ -401,5 +425,62 @@
   </footer>
 
   <script src="./assets/main.js"></script>
+
+  <script>
+    // Category filter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const articles = document.querySelectorAll('.blog-entry');
+      
+      // Add active state styling
+      const style = document.createElement('style');
+      style.textContent = `
+        .filter-btn.active {
+          color: #223a65 !important;
+          font-weight: 600;
+        }
+        .blog-entry {
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .blog-entry.hidden {
+          display: none;
+        }
+      `;
+      document.head.appendChild(style);
+
+      function filterArticles(category) {
+        articles.forEach(article => {
+          const articleCategory = article.getAttribute('data-category');
+          
+          if (category === 'all') {
+            article.classList.remove('hidden');
+          } else {
+            if (articleCategory === category) {
+              article.classList.remove('hidden');
+            } else {
+              article.classList.add('hidden');
+            }
+          }
+        });
+
+        // Update active button state
+        filterButtons.forEach(btn => {
+          if (btn.getAttribute('data-category') === category) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+      }
+
+      // Add click event listeners to filter buttons
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const category = this.getAttribute('data-category');
+          filterArticles(category);
+        });
+      });
+    });
+  </script>
 
 </body>
